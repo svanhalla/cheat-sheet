@@ -1,0 +1,33 @@
+{
+  "site": {
+    "title": "Portfolio Site",
+    "description": "Professional portfolio website",
+    "author": "Your Name",
+    "url": "https://yourusername.github.io/your-repo"
+  },
+  "navigation": [
+    { "label": "Home", "href": "/" },
+    { "label": "Portfolio", "href": "/portfolio" },
+    { "label": "About", "href": "/about" },
+    { "label": "Contact", "href": "/contact" }
+  ],
+  "collections": [
+    {
+      "id": "recent-work",
+      "title": "Recent Work",
+      "description": "Latest projects and creations",
+      "thumbnail": "/images/gallery/recent/thumb.jpg",
+      "visible": true,
+      "items": [
+        {
+          "path": "/images/gallery/recent/project1.jpg",
+          "title": "Project Title",
+          "year": "2025",
+          "description": "Detailed description of the project",
+          "medium": "Digital Art",
+          "visible": true
+        }
+      ]
+    }
+  ]
+}
