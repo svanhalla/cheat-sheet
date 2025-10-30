@@ -1,0 +1,96 @@
+{
+  "id": "install-software",
+  "title": "Install Software",
+  "description": "Essential software installation for macOS development",
+  "icon": "💾",
+  "categories": [
+    {
+      "title": "Opening Terminal",
+      "commands": [
+        {
+          "command": "⌘ + Space → type 'terminal' → Enter",
+          "description": "🚀 FASTEST: Press Command + Space keys together, type 'terminal', press Enter",
+          "copyable": false
+        },
+        {
+          "command": "⌘ + Space → type 'term' → Enter",
+          "description": "💡 TIP: You only need to type 'term' - macOS will find Terminal",
+          "copyable": false
+        },
+        {
+          "command": "Finder → Applications → Utilities → Terminal",
+          "description": "📁 Alternative: Click Finder, then Applications folder, then Utilities, double-click Terminal",
+          "copyable": false
+        },
+        {
+          "command": "Dock → Launchpad → Terminal",
+          "description": "🎯 If Terminal is in your Dock or Launchpad, just click it",
+          "copyable": false
+        }
+      ]
+    },
+    {
+      "title": "Homebrew (Package Manager)",
+      "commands": [
+        {
+          "command": "/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"",
+          "description": "This should be installed in terminal.Install Homebrew package manager for macOS"
+        },
+        {
+          "command": "brew --version",
+          "description": "Check if Homebrew is installed and show version"
+        },
+        {
+          "command": "brew update",
+          "description": "Update Homebrew to latest version"
+        },
+        {
+          "command": "brew upgrade",
+          "description": "Upgrade all installed packages"
+        }
+      ]
+    },
+    {
+      "title": "Node.js & npm (JavaScript Runtime)",
+      "commands": [
+        {
+          "command": "brew install node",
+          "description": "Install Node.js (includes npm automatically)"
+        },
+        {
+          "command": "node --version",
+          "description": "Check Node.js version"
+        },
+        {
+          "command": "npm --version",
+          "description": "Check npm version"
+        },
+        {
+          "command": "npm install -g npm@latest",
+          "description": "Update npm to latest version"
+        }
+      ]
+    },
+    {
+      "title": "VS Code (Code Editor)",
+      "commands": [
+        {
+          "command": "brew install --cask visual-studio-code",
+          "description": "Install VS Code using Homebrew"
+        },
+        {
+          "command": "code --version",
+          "description": "Check VS Code version"
+        },
+        {
+          "command": "code .",
+          "description": "Open current directory in VS Code"
+        },
+        {
+          "command": "code filename.txt",
+          "description": "Open specific file in VS Code"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,292 @@
+{
+  "id": "maggie-workflows",
+  "title": "Maggie Website Workflows",
+  "description": "Step-by-step guide for updating Maggie's website",
+  "icon": "🎨",
+  "categories": [
+    {
+      "title": "1. Initial Setup (One Time Only)",
+      "purpose": "Get the website code on your computer and prepare for editing",
+      "commands": [
+        {
+          "command": "⌘ + Space → type 'terminal' → Enter",
+          "description": "🚀 FASTEST: Press Command + Space keys together, type 'terminal', press Enter to open Terminal",
+          "copyable": false
+        },
+        {
+          "command": "cd ~/Documents",
+          "description": "Navigate to your Documents folder where the project will be stored"
+        },
+        {
+          "command": "git clone git@github.com:svanhalla/maggie.git",
+          "description": "Download the website code to your computer using SSH"
+        },
+        {
+          "command": "cd maggie",
+          "description": "Enter the project folder that was just created"
+        },
+        {
+          "command": "npm install",
+          "description": "Install all required dependencies (this may take a few minutes)"
+        }
+      ]
+    },
+    {
+      "title": "2. Making Content Changes",
+      "purpose": "Edit website content by modifying JSON files in the data folder",
+      "commands": [
+        {
+          "command": "cd ~/Documents/repos/maggie",
+          "description": "Navigate to the maggie project folder"
+        },
+        {
+          "command": "open data/about.json",
+          "description": "📝 Biography, contact info, publications, and media links"
+        },
+        {
+          "command": "open data/home.json",
+          "description": "🏠 Homepage content, featured sections, and layout settings"
+        },
+        {
+          "command": "open data/workshops.json",
+          "description": "🎓 Workshop schedules, descriptions, and pricing"
+        },
+        {
+          "command": "open data/books.json",
+          "description": "📚 Published books, covers, and gallery images"
+        },
+        {
+          "command": "open data/galleries.json",
+          "description": "🏛️ Representing art galleries contact information"
+        }
+      ],
+      "subsections": [
+        {
+          "title": "🖼️ Works Menu - Gallery Configuration & Collections",
+          "commands": [
+            {
+              "command": "open data/works.json",
+              "description": "🖼️ Main gallery page - controls thumbnails and links. Each 'id' field connects to works-[id].json files"
+            },
+            {
+              "command": "Example: \"id\": \"2022-2025\"",
+              "description": "💡 This ID in works.json links to → works-2022-2025.json file",
+              "copyable": false
+            },
+            {
+              "command": "open data/works-2022-2025.json",
+              "description": "Recent artwork collection (2022-2025) - newest pieces"
+            },
+            {
+              "command": "open data/works-2014-2021.json",
+              "description": "Digital explorations period (2014-2021)"
+            },
+            {
+              "command": "open data/works-2010-2013.json",
+              "description": "Surreal narratives period (2010-2013)"
+            },
+            {
+              "command": "open data/works-2005-2009.json",
+              "description": "Digital dreams period (2005-2009)"
+            },
+            {
+              "command": "open data/works-1999-2004.json",
+              "description": "Early digital works period (1999-2004)"
+            },
+            {
+              "command": "open data/works-alice.json",
+              "description": "🐰 Alice's Adventures in Wonderland themed collection"
+            },
+            {
+              "command": "open data/works-ttlg.json",
+              "description": "🪞 Through the Looking Glass themed collection"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2b. JSON Editing Rules (IMPORTANT!)",
+      "purpose": "Critical syntax rules to avoid breaking the website",
+      "commands": [
+        {
+          "command": "\"text\": \"value\",",
+          "description": "✅ CORRECT: Use double quotes, comma after each item"
+        },
+        {
+          "command": "\"text\": \"value\"",
+          "description": "✅ CORRECT: NO comma on the LAST item in a list"
+        },
+        {
+          "command": "'text': 'value',",
+          "description": "❌ WRONG: Never use single quotes in JSON"
+        },
+        {
+          "command": "\"visible\": true",
+          "description": "✅ CORRECT: true/false (no quotes for booleans)"
+        },
+        {
+          "command": "\"visible\": \"true\"",
+          "description": "❌ WRONG: Don't put quotes around true/false"
+        },
+        {
+          "command": "Check JSON syntax",
+          "description": "💡 TIP: Dreamweaver shows red errors if JSON syntax is wrong"
+        }
+      ]
+    },
+    {
+      "title": "2c. JSON File Format Guide",
+      "purpose": "Understanding the structure and format of JSON files for website content",
+      "commands": [
+        {
+          "command": "Basic JSON Structure",
+          "description": "JSON files contain data in key-value pairs enclosed in curly braces { }",
+          "copyable": false
+        },
+        {
+          "command": "\"title\": \"Page Title\"",
+          "description": "Text values must be in double quotes"
+        },
+        {
+          "command": "\"visible\": true",
+          "description": "Boolean values (true/false) have no quotes"
+        },
+        {
+          "command": "\"year\": \"2025\"",
+          "description": "Numbers can be in quotes for consistency"
+        },
+        {
+          "command": "[\"item1\", \"item2\", \"item3\"]",
+          "description": "Arrays (lists) use square brackets [ ]"
+        },
+        {
+          "command": "Comma Rules",
+          "description": "Put commas after each item, EXCEPT the last item in a list",
+          "copyable": false
+        },
+        {
+          "command": "\"images\": [\n  {\n    \"path\": \"/image1.jpg\",\n    \"title\": \"First\"\n  },\n  {\n    \"path\": \"/image2.jpg\",\n    \"title\": \"Second\"\n  }\n]",
+          "description": "Objects in arrays - note NO comma after the last object"
+        }
+      ]
+    },
+    {
+      "title": "3. Preview Changes Locally",
+      "purpose": "Test your changes on your computer before publishing to the live website",
+      "commands": [
+        {
+          "command": "cd ~/Documents/maggie",
+          "description": "Navigate to the maggie project folder"
+        },
+        {
+          "command": "npm run dev",
+          "description": "Start local development server"
+        },
+        {
+          "command": "open http://localhost:3000",
+          "description": "View your changes in the browser (Ctrl+C to stop server)"
+        }
+      ]
+    },
+    {
+      "title": "4. Quick Reference - Common Tasks",
+      "purpose": "Helpful commands for checking status and troubleshooting",
+      "commands": [
+        {
+          "command": "git status",
+          "description": "Check what files you've changed"
+        },
+        {
+          "command": "git pull",
+          "description": "Get latest changes before starting work"
+        },
+        {
+          "command": "git log --oneline -5",
+          "description": "See recent changes to the website"
+        },
+        {
+          "command": "git stash",
+          "description": "Temporarily save your changes without committing (useful before git pull)"
+        },
+        {
+          "command": "git stash pop",
+          "description": "Restore your temporarily saved changes"
+        },
+        {
+          "command": "git stash clear",
+          "description": "Delete all temporarily saved changes (use carefully!)"
+        },
+        {
+          "command": "git diff",
+          "description": "See exactly what you've changed in files"
+        },
+        {
+          "command": "git checkout -- filename.json",
+          "description": "Undo changes to a specific file (revert to last saved version)"
+        },
+        {
+          "command": "git revert HEAD",
+          "description": "Undo the last commit (creates a new commit that undoes changes)"
+        }
+      ]
+    },
+    {
+      "title": "🔧 Troubleshooting Common Issues",
+      "purpose": "Fix common problems when working with the website",
+      "commands": [
+        {
+          "command": "npm install",
+          "description": "🚨 FIRST: If you get 'next: command not found' - install dependencies"
+        },
+        {
+          "command": "node --version",
+          "description": "Check if Node.js is installed (should show version like v18.x.x)"
+        },
+        {
+          "command": "npm --version",
+          "description": "Check if npm is installed (should show version like 9.x.x)"
+        },
+        {
+          "command": "brew install node",
+          "description": "Install Node.js if missing (includes npm)"
+        },
+        {
+          "command": "rm -rf node_modules package-lock.json",
+          "description": "🗑️ Delete corrupted dependencies (then run npm install)"
+        },
+        {
+          "command": "npm run dev -- --port 3001",
+          "description": "🔄 Use different port if 3000 is busy"
+        },
+        {
+          "command": "lsof -ti:3000 | xargs kill -9",
+          "description": "💀 Kill process using port 3000 (if server won't start)"
+        }
+      ]
+    },
+    {
+      "title": "5. 🚀 PUBLISH Changes to Live Website",
+      "purpose": "⚠️ FINAL STEP: Upload your changes to make them live on maggietaylor.com",
+      "isPublishStep": true,
+      "commands": [
+        {
+          "command": "cd ~/Documents/maggie",
+          "description": "Navigate to the maggie project folder"
+        },
+        {
+          "command": "git add -A",
+          "description": "Stage all your changes for commit"
+        },
+        {
+          "command": "git commit -m \"Describe what you changed\"",
+          "description": "Save changes with YOUR description (e.g. \"Added new artwork\" or \"Updated workshop dates\")"
+        },
+        {
+          "command": "git push",
+          "description": "🚀 Upload changes to GitHub (website updates automatically in 2-3 minutes)"
+        }
+      ]
+    }
+  ]
+}

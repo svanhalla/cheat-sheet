@@ -1,0 +1,46 @@
+{
+  "id": "aws",
+  "title": "AWS CLI",
+  "description": "AWS command line interface",
+  "icon": "☁️",
+  "categories": [
+    {
+      "title": "Opening Terminal",
+      "commands": [
+        {
+          "command": "⌘ + Space → type 'terminal' → Enter",
+          "description": "🚀 FASTEST: Press Command + Space keys together, type 'terminal', press Enter",
+          "copyable": false
+        },
+        {
+          "command": "⌘ + Space → type 'term' → Enter",
+          "description": "💡 TIP: You only need to type 'term' - macOS will find Terminal",
+          "copyable": false
+        },
+        {
+          "command": "Finder → Applications → Utilities → Terminal",
+          "description": "📁 Alternative: Click Finder, then Applications folder, then Utilities, double-click Terminal",
+          "copyable": false
+        },
+        {
+          "command": "Dock → Launchpad → Terminal",
+          "description": "🎯 If Terminal is in your Dock or Launchpad, just click it",
+          "copyable": false
+        }
+      ]
+    },
+    {
+      "title": "S3 Commands",
+      "commands": [
+        {
+          "command": "aws s3 ls",
+          "description": "List S3 buckets"
+        },
+        {
+          "command": "aws s3 cp file.txt s3://bucket/",
+          "description": "Copy file to S3"
+        }
+      ]
+    }
+  ]
+}

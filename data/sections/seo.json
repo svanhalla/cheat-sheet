@@ -1,0 +1,149 @@
+{
+  "id": "seo",
+  "title": "SEO & Google Search",
+  "description": "Search engine optimization techniques and Google indexing",
+  "icon": "🔍",
+  "categories": [
+    {
+      "title": "Meta Tags",
+      "commands": [
+        {
+          "command": "<title>Page Title (50-60 characters)</title>",
+          "description": "Page title - most important SEO element"
+        },
+        {
+          "command": "<meta name=\"description\" content=\"Page description 150-160 chars\">",
+          "description": "Meta description - appears in search results"
+        },
+        {
+          "command": "<meta name=\"keywords\" content=\"keyword1, keyword2, keyword3\">",
+          "description": "Keywords (less important now, but still used)"
+        },
+        {
+          "command": "<meta name=\"robots\" content=\"index, follow\">",
+          "description": "Tell search engines to index and follow links"
+        },
+        {
+          "command": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
+          "description": "Mobile-friendly viewport (required for mobile SEO)"
+        },
+        {
+          "command": "<link rel=\"canonical\" href=\"https://example.com/page\">",
+          "description": "Canonical URL to prevent duplicate content issues"
+        }
+      ]
+    },
+    {
+      "title": "Open Graph (Social Media)",
+      "commands": [
+        {
+          "command": "<meta property=\"og:title\" content=\"Page Title\">",
+          "description": "Title when shared on social media"
+        },
+        {
+          "command": "<meta property=\"og:description\" content=\"Page description\">",
+          "description": "Description when shared on social media"
+        },
+        {
+          "command": "<meta property=\"og:image\" content=\"https://example.com/image.jpg\">",
+          "description": "Image when shared (1200x630px recommended)"
+        },
+        {
+          "command": "<meta property=\"og:url\" content=\"https://example.com/page\">",
+          "description": "Canonical URL for social sharing"
+        },
+        {
+          "command": "<meta property=\"og:type\" content=\"website\">",
+          "description": "Type of content (website, article, etc.)"
+        },
+        {
+          "command": "<meta name=\"twitter:card\" content=\"summary_large_image\">",
+          "description": "Twitter card type for better Twitter sharing"
+        }
+      ]
+    },
+    {
+      "title": "Google Indexing Process",
+      "commands": [
+        {
+          "command": "Submit sitemap to Google Search Console",
+          "description": "📋 Step 1: Add your sitemap.xml to help Google find all pages"
+        },
+        {
+          "command": "Request indexing for new pages",
+          "description": "📋 Step 2: Use 'Request Indexing' in Search Console for new content"
+        },
+        {
+          "command": "Check robots.txt file",
+          "description": "📋 Step 3: Ensure robots.txt allows Google to crawl your site"
+        },
+        {
+          "command": "Monitor Core Web Vitals",
+          "description": "📋 Step 4: Check page speed and user experience metrics"
+        },
+        {
+          "command": "Build quality backlinks",
+          "description": "📋 Step 5: Get other reputable sites to link to your content"
+        },
+        {
+          "command": "Create quality content regularly",
+          "description": "📋 Step 6: Publish fresh, valuable content consistently"
+        }
+      ]
+    },
+    {
+      "title": "Structured Data (Schema)",
+      "commands": [
+        {
+          "command": "<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Organization\",\n  \"name\": \"Your Company\",\n  \"url\": \"https://example.com\"\n}\n</script>",
+          "description": "Organization schema for business information"
+        },
+        {
+          "command": "<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"Article Title\",\n  \"author\": \"Author Name\",\n  \"datePublished\": \"2025-01-01\"\n}\n</script>",
+          "description": "Article schema for blog posts and articles"
+        },
+        {
+          "command": "<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebSite\",\n  \"name\": \"Site Name\",\n  \"url\": \"https://example.com\",\n  \"potentialAction\": {\n    \"@type\": \"SearchAction\",\n    \"target\": \"https://example.com/search?q={search_term_string}\",\n    \"query-input\": \"required name=search_term_string\"\n  }\n}\n</script>",
+          "description": "Website schema with search functionality"
+        }
+      ]
+    },
+    {
+      "title": "Essential SEO Tools & Links",
+      "commands": [
+        {
+          "command": "https://search.google.com/search-console",
+          "description": "🔧 Google Search Console - Monitor your site's search performance"
+        },
+        {
+          "command": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap",
+          "description": "📖 Google Sitemap Guide - How to create and submit sitemaps"
+        },
+        {
+          "command": "https://pagespeed.web.dev/",
+          "description": "⚡ PageSpeed Insights - Test your site's loading speed"
+        },
+        {
+          "command": "https://search.google.com/test/mobile-friendly",
+          "description": "📱 Mobile-Friendly Test - Check if your site works on mobile"
+        },
+        {
+          "command": "https://validator.schema.org/",
+          "description": "✅ Schema Validator - Test your structured data markup"
+        },
+        {
+          "command": "https://developers.google.com/search/docs/appearance/structured-data",
+          "description": "📚 Google Structured Data Guide - Complete reference"
+        },
+        {
+          "command": "https://ahrefs.com/backlink-checker",
+          "description": "🔗 Backlink Checker - See who links to your site (free tool)"
+        },
+        {
+          "command": "https://www.google.com/webmasters/tools/submit-url",
+          "description": "🚀 Submit URL to Google - Request indexing of single pages"
+        }
+      ]
+    }
+  ]
+}

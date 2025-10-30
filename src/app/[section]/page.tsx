@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import cheatSheets from '../../../data/cheat-sheets.json'
+import { loadAllSections, loadSection } from '../../utils/loadSections'
 import CodeBlock from '../../components/CodeBlock'
 import WorkflowStep from '../../components/WorkflowStep'
 import CollapsibleSection from '../../components/CollapsibleSection'
@@ -12,14 +12,15 @@ interface PageProps {
 }
 
 export function generateStaticParams() {
-  return cheatSheets.sections.map((section) => ({
+  const sections = loadAllSections()
+  return sections.map((section) => ({
     section: section.id,
   }))
 }
 
 export default async function SectionPage({ params }: PageProps) {
   const { section: sectionId } = await params
-  const section = cheatSheets.sections.find(s => s.id === sectionId)
+  const section = loadSection(sectionId)
   
   if (!section) {
     notFound()
@@ -69,7 +70,7 @@ export default async function SectionPage({ params }: PageProps) {
                 <CollapsibleSection
                   key={categoryIndex}
                   title={category.title}
-                  commands={category.commands}
+                  commands={category.commands || []}
                   defaultExpanded={categoryIndex === 0}
                 />
               ))}

@@ -1,0 +1,50 @@
+{
+  "id": "nextjs",
+  "title": "Next.js",
+  "description": "Next.js development commands and patterns",
+  "icon": "⚛️",
+  "categories": [
+    {
+      "title": "Opening Terminal",
+      "commands": [
+        {
+          "command": "⌘ + Space → type 'terminal' → Enter",
+          "description": "🚀 FASTEST: Press Command + Space keys together, type 'terminal', press Enter",
+          "copyable": false
+        },
+        {
+          "command": "⌘ + Space → type 'term' → Enter",
+          "description": "💡 TIP: You only need to type 'term' - macOS will find Terminal",
+          "copyable": false
+        },
+        {
+          "command": "Finder → Applications → Utilities → Terminal",
+          "description": "📁 Alternative: Click Finder, then Applications folder, then Utilities, double-click Terminal",
+          "copyable": false
+        },
+        {
+          "command": "Dock → Launchpad → Terminal",
+          "description": "🎯 If Terminal is in your Dock or Launchpad, just click it",
+          "copyable": false
+        }
+      ]
+    },
+    {
+      "title": "CLI Commands",
+      "commands": [
+        {
+          "command": "npx create-next-app@latest",
+          "description": "Create new Next.js app"
+        },
+        {
+          "command": "npm run dev",
+          "description": "Start development server"
+        },
+        {
+          "command": "npm run build",
+          "description": "Build for production"
+        }
+      ]
+    }
+  ]
+}

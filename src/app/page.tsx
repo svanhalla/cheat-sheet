@@ -1,7 +1,9 @@
 import Link from 'next/link'
-import cheatSheets from '../../data/cheat-sheets.json'
+import { loadAllSections } from '../utils/loadSections'
 
 export default function Home() {
+  const sections = loadAllSections()
+
   return (
     <div className="min-h-screen">
       <header className="bg-white shadow-sm border-b">
@@ -15,7 +17,7 @@ export default function Home() {
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {cheatSheets.sections.map((section) => (
+          {sections.map((section) => (
             <Link
               key={section.id}
               href={`/${section.id}`}

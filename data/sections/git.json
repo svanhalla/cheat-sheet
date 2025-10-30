@@ -1,0 +1,375 @@
+{
+  "id": "git",
+  "title": "Git",
+  "description": "Git commands and workflows for version control",
+  "icon": "🔧",
+  "categories": [
+    {
+      "title": "Opening Terminal",
+      "commands": [
+        {
+          "command": "⌘ + Space → type 'terminal' → Enter",
+          "description": "🚀 FASTEST: Press Command + Space keys together, type 'terminal', press Enter",
+          "copyable": false
+        },
+        {
+          "command": "⌘ + Space → type 'term' → Enter",
+          "description": "💡 TIP: You only need to type 'term' - macOS will find Terminal",
+          "copyable": false
+        },
+        {
+          "command": "Finder → Applications → Utilities → Terminal",
+          "description": "📁 Alternative: Click Finder, then Applications folder, then Utilities, double-click Terminal",
+          "copyable": false
+        },
+        {
+          "command": "Dock → Launchpad → Terminal",
+          "description": "🎯 If Terminal is in your Dock or Launchpad, just click it",
+          "copyable": false
+        }
+      ]
+    },
+    {
+      "title": "Basic Commands",
+      "commands": [
+        {
+          "command": "git status",
+          "description": "Check repository status and see what files have changed"
+        },
+        {
+          "command": "git add .",
+          "description": "Stage all changes for commit"
+        },
+        {
+          "command": "git add filename.txt",
+          "description": "Stage specific file for commit"
+        },
+        {
+          "command": "git commit -m \"Your message here\"",
+          "description": "Commit staged changes with a descriptive message"
+        },
+        {
+          "command": "git push",
+          "description": "Push commits to remote repository"
+        },
+        {
+          "command": "git pull",
+          "description": "Pull latest changes from remote repository"
+        },
+        {
+          "command": "git log --oneline",
+          "description": "View commit history in compact format"
+        }
+      ]
+    },
+    {
+      "title": "Branching & Merging",
+      "commands": [
+        {
+          "command": "git branch",
+          "description": "List all local branches (* shows current branch)"
+        },
+        {
+          "command": "git branch -a",
+          "description": "List all branches (local and remote)"
+        },
+        {
+          "command": "git checkout -b feature-name",
+          "description": "Create and switch to new branch"
+        },
+        {
+          "command": "git checkout main",
+          "description": "Switch to main branch"
+        },
+        {
+          "command": "git merge feature-name",
+          "description": "Merge feature branch into current branch"
+        },
+        {
+          "command": "git branch -d feature-name",
+          "description": "Delete local branch (after merging)"
+        }
+      ]
+    },
+    {
+      "title": "Undoing Changes",
+      "commands": [
+        {
+          "command": "git diff",
+          "description": "See what changes you've made (not yet staged)"
+        },
+        {
+          "command": "git diff --staged",
+          "description": "See staged changes (ready to commit)"
+        },
+        {
+          "command": "git checkout -- filename.txt",
+          "description": "Discard changes to specific file (revert to last commit)"
+        },
+        {
+          "command": "git reset HEAD filename.txt",
+          "description": "Unstage specific file (keep changes)"
+        },
+        {
+          "command": "git reset --hard HEAD",
+          "description": "⚠️ Discard ALL changes (dangerous - cannot be undone)"
+        },
+        {
+          "command": "git revert HEAD",
+          "description": "Create new commit that undoes the last commit"
+        }
+      ]
+    },
+    {
+      "title": "Stashing (Temporary Storage)",
+      "commands": [
+        {
+          "command": "git stash",
+          "description": "Temporarily save current changes without committing"
+        },
+        {
+          "command": "git stash push -m \"Work in progress\"",
+          "description": "Stash changes with a descriptive message"
+        },
+        {
+          "command": "git stash list",
+          "description": "List all stashed changes"
+        },
+        {
+          "command": "git stash pop",
+          "description": "Apply most recent stash and remove it from stash list"
+        },
+        {
+          "command": "git stash apply",
+          "description": "Apply most recent stash but keep it in stash list"
+        },
+        {
+          "command": "git stash drop",
+          "description": "Delete most recent stash without applying"
+        },
+        {
+          "command": "git stash clear",
+          "description": "⚠️ Delete all stashes (cannot be undone)"
+        }
+      ]
+    },
+    {
+      "title": "Repository Setup",
+      "commands": [
+        {
+          "command": "git init",
+          "description": "Initialize new Git repository in current directory"
+        },
+        {
+          "command": "git clone https://github.com/user/repo.git",
+          "description": "Clone remote repository to local machine"
+        },
+        {
+          "command": "git remote -v",
+          "description": "Show remote repository URLs"
+        },
+        {
+          "command": "git remote add origin https://github.com/user/repo.git",
+          "description": "Add remote repository URL"
+        }
+      ]
+    },
+    {
+      "title": "Git Configuration",
+      "commands": [
+        {
+          "command": "git config --global user.name \"Your Name\"",
+          "description": "Set your name for all repositories"
+        },
+        {
+          "command": "git config --global user.email \"your.email@example.com\"",
+          "description": "Set your email for all repositories"
+        },
+        {
+          "command": "git config --global pull.rebase true",
+          "description": "Always rebase when pulling (cleaner history)"
+        },
+        {
+          "command": "git config --global init.defaultBranch main",
+          "description": "Use 'main' as default branch name for new repos"
+        },
+        {
+          "command": "git config --global core.autocrlf input",
+          "description": "Handle line endings automatically (Mac/Linux)"
+        },
+        {
+          "command": "git config --global core.editor \"code --wait\"",
+          "description": "Use VS Code as default Git editor"
+        },
+        {
+          "command": "git config --global alias.st status",
+          "description": "Create shortcut: 'git st' for 'git status'"
+        },
+        {
+          "command": "git config --global alias.co checkout",
+          "description": "Create shortcut: 'git co' for 'git checkout'"
+        },
+        {
+          "command": "git config --global alias.br branch",
+          "description": "Create shortcut: 'git br' for 'git branch'"
+        },
+        {
+          "command": "git config --global alias.unstage 'reset HEAD --'",
+          "description": "Create shortcut: 'git unstage' to unstage files"
+        },
+        {
+          "command": "git config --global alias.last 'log -1 HEAD'",
+          "description": "Create shortcut: 'git last' to see last commit"
+        },
+        {
+          "command": "git config --global alias.lg 'log --oneline --graph --decorate --all'",
+          "description": "Create shortcut: 'git lg' for beautiful log with graph"
+        },
+        {
+          "command": "git config --global alias.s 'status -s'",
+          "description": "Create shortcut: 'git s' for short status"
+        },
+        {
+          "command": "git config --global alias.cm 'commit -m'",
+          "description": "Create shortcut: 'git cm \"message\"' for quick commits"
+        },
+        {
+          "command": "git config --global alias.amend 'commit --amend --no-edit'",
+          "description": "Create shortcut: 'git amend' to add changes to last commit"
+        },
+        {
+          "command": "git config --global alias.undo 'reset --soft HEAD~1'",
+          "description": "Create shortcut: 'git undo' to undo last commit (keep changes)"
+        },
+        {
+          "command": "git config --global alias.wip 'commit -am \"WIP\"'",
+          "description": "Create shortcut: 'git wip' for work-in-progress commits"
+        },
+        {
+          "command": "git config --global alias.aliases 'config --get-regexp alias'",
+          "description": "Create shortcut: 'git aliases' to list all your aliases"
+        },
+        {
+          "command": "git config --global push.default simple",
+          "description": "Only push current branch to matching branch"
+        },
+        {
+          "command": "git config --list",
+          "description": "View all current Git configuration settings"
+        }
+      ]
+    },
+    {
+      "title": "Useful Shortcuts & Tips",
+      "commands": [
+        {
+          "command": "git commit -am \"Message\"",
+          "description": "Stage and commit all modified files in one command"
+        },
+        {
+          "command": "git log --graph --oneline --all",
+          "description": "Visual branch history with graph"
+        },
+        {
+          "command": "git show HEAD",
+          "description": "Show details of the last commit"
+        },
+        {
+          "command": "git blame filename.txt",
+          "description": "See who changed each line in a file"
+        },
+        {
+          "command": "git clean -fd",
+          "description": "Remove untracked files and directories"
+        }
+      ]
+    },
+    {
+      "title": "GitHub SSH Setup",
+      "commands": [
+        {
+          "command": "ssh-keygen -t ed25519 -C \"your.email@example.com\"",
+          "description": "Generate new SSH key (replace with your GitHub email)"
+        },
+        {
+          "command": "Press Enter",
+          "description": "Accept default file location (~/.ssh/id_ed25519)",
+          "copyable": false
+        },
+        {
+          "command": "Enter passphrase (optional)",
+          "description": "💡 TIP: Press Enter twice for no passphrase, or create a secure passphrase",
+          "copyable": false
+        },
+        {
+          "command": "eval \"$(ssh-agent -s)\"",
+          "description": "Start SSH agent in background"
+        },
+        {
+          "command": "ssh-add ~/.ssh/id_ed25519",
+          "description": "Add SSH private key to ssh-agent"
+        },
+        {
+          "command": "pbcopy < ~/.ssh/id_ed25519.pub",
+          "description": "📋 Copy public key to clipboard (macOS)"
+        },
+        {
+          "command": "cat ~/.ssh/id_ed25519.pub",
+          "description": "📄 Display public key (copy manually if pbcopy doesn't work)"
+        },
+        {
+          "command": "Go to GitHub.com → Settings → SSH and GPG keys",
+          "description": "🌐 Open GitHub in browser and navigate to SSH settings",
+          "copyable": false
+        },
+        {
+          "command": "Click 'New SSH key' → Paste key → Add SSH key",
+          "description": "➕ Add your public key to GitHub account",
+          "copyable": false
+        },
+        {
+          "command": "ssh -T git@github.com",
+          "description": "🧪 Test SSH connection to GitHub"
+        },
+        {
+          "command": "Type 'yes' when prompted",
+          "description": "✅ Confirm GitHub's fingerprint (first time only)",
+          "copyable": false
+        }
+      ]
+    },
+    {
+      "title": "Useful Links & Resources",
+      "commands": [
+        {
+          "command": "https://git-scm.com/docs",
+          "description": "📖 Official Git Documentation - Complete reference"
+        },
+        {
+          "command": "https://learngitbranching.js.org/",
+          "description": "🎮 Interactive Git Tutorial - Learn branching visually"
+        },
+        {
+          "command": "https://ohshitgit.com/",
+          "description": "🆘 Oh Shit, Git! - Fix common Git mistakes"
+        },
+        {
+          "command": "https://gitexplorer.com/",
+          "description": "🔍 Git Explorer - Find the right Git command"
+        },
+        {
+          "command": "https://github.com/git-tips/tips",
+          "description": "💡 Git Tips - Collection of useful Git tricks"
+        },
+        {
+          "command": "https://www.atlassian.com/git/tutorials",
+          "description": "📚 Atlassian Git Tutorials - Comprehensive guides"
+        },
+        {
+          "command": "https://gitignore.io/",
+          "description": "🚫 .gitignore Generator - Create .gitignore files"
+        }
+      ]
+    }
+  ]
+}
