@@ -89,6 +89,21 @@
         {
           "command": "code filename.txt",
           "description": "Open specific file in VS Code"
+        },
+        {
+          "command": "⌃ + ` (Control + Backtick)",
+          "description": "🖥️ Open integrated terminal in VS Code",
+          "copyable": false
+        },
+        {
+          "command": "View → Terminal",
+          "description": "📋 Alternative: Use VS Code menu to open terminal",
+          "copyable": false
+        },
+        {
+          "command": "⌘ + Shift + P → type 'terminal'",
+          "description": "🔍 Command Palette: Search for terminal commands",
+          "copyable": false
         }
       ]
     }

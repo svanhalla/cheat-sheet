@@ -16,25 +16,51 @@ export default function Home() {
       </header>
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {sections.map((section) => (
+        {/* Special Tools Section */}
+        <div className="mb-12">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">🛠️ Interactive Tools</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Link
-              key={section.id}
-              href={`/${section.id}`}
-              className="command-card group cursor-pointer"
+              href="/playground"
+              className="command-card group cursor-pointer border-2 border-primary/20 hover:border-primary/40"
             >
               <div className="flex items-center space-x-3 mb-3">
-                <span className="text-2xl">{section.icon}</span>
-                <h2 className="text-xl font-semibold group-hover:text-primary transition-colors">
-                  {section.title}
-                </h2>
+                <span className="text-2xl">🎨</span>
+                <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">
+                  Color & Font Playground
+                </h3>
               </div>
-              <p className="text-gray-600">{section.description}</p>
+              <p className="text-gray-600">Interactive tool to test colors (RGB), fonts, and sizes with live preview</p>
               <div className="mt-4 text-sm text-primary font-medium">
-                View commands →
+                Try it out →
               </div>
             </Link>
-          ))}
+          </div>
+        </div>
+
+        {/* Cheat Sheets Section */}
+        <div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">📚 Cheat Sheets</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {sections.map((section) => (
+              <Link
+                key={section.id}
+                href={`/${section.id}`}
+                className="command-card group cursor-pointer"
+              >
+                <div className="flex items-center space-x-3 mb-3">
+                  <span className="text-2xl">{section.icon}</span>
+                  <h2 className="text-xl font-semibold group-hover:text-primary transition-colors">
+                    {section.title}
+                  </h2>
+                </div>
+                <p className="text-gray-600">{section.description}</p>
+                <div className="mt-4 text-sm text-primary font-medium">
+                  View commands →
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </main>
     </div>

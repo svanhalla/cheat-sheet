@@ -4,6 +4,7 @@
     "sections/git.json",
     "sections/seo.json",
     "sections/install-software.json",
+    "sections/css-design.json",
     "sections/nextjs.json",
     "sections/aws.json"
   ]

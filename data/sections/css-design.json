@@ -1,0 +1,283 @@
+{
+  "id": "css-design",
+  "title": "CSS & Design",
+  "description": "Colors, typography, and design reference for web development",
+  "icon": "🎨",
+  "categories": [
+    {
+      "title": "Colors (RGB & Hex)",
+      "commands": [
+        {
+          "command": "rgb(255, 0, 0)",
+          "description": "🔴 Red - Pure red color"
+        },
+        {
+          "command": "rgb(0, 255, 0)",
+          "description": "🟢 Green - Pure green color"
+        },
+        {
+          "command": "rgb(0, 0, 255)",
+          "description": "🔵 Blue - Pure blue color"
+        },
+        {
+          "command": "rgb(255, 255, 255)",
+          "description": "⚪ White - All colors at maximum"
+        },
+        {
+          "command": "rgb(0, 0, 0)",
+          "description": "⚫ Black - No color"
+        },
+        {
+          "command": "rgb(128, 128, 128)",
+          "description": "🔘 Gray - 50% gray"
+        },
+        {
+          "command": "#FF0000",
+          "description": "🔴 Red in hexadecimal format"
+        },
+        {
+          "command": "#00FF00",
+          "description": "🟢 Green in hexadecimal format"
+        },
+        {
+          "command": "#0000FF",
+          "description": "🔵 Blue in hexadecimal format"
+        },
+        {
+          "command": "#FFFFFF",
+          "description": "⚪ White in hexadecimal format"
+        },
+        {
+          "command": "#000000",
+          "description": "⚫ Black in hexadecimal format"
+        },
+        {
+          "command": "rgba(255, 0, 0, 0.5)",
+          "description": "🔴 Red with 50% transparency (alpha)"
+        }
+      ]
+    },
+    {
+      "title": "Common Color Palettes",
+      "commands": [
+        {
+          "command": "#3B82F6",
+          "description": "🔵 Blue-500 (Tailwind) - Primary blue"
+        },
+        {
+          "command": "#EF4444",
+          "description": "🔴 Red-500 (Tailwind) - Error red"
+        },
+        {
+          "command": "#10B981",
+          "description": "🟢 Green-500 (Tailwind) - Success green"
+        },
+        {
+          "command": "#F59E0B",
+          "description": "🟡 Yellow-500 (Tailwind) - Warning yellow"
+        },
+        {
+          "command": "#8B5CF6",
+          "description": "🟣 Purple-500 (Tailwind) - Accent purple"
+        },
+        {
+          "command": "#6B7280",
+          "description": "🔘 Gray-500 (Tailwind) - Neutral gray"
+        },
+        {
+          "command": "#1F2937",
+          "description": "⚫ Gray-800 (Tailwind) - Dark text"
+        },
+        {
+          "command": "#F9FAFB",
+          "description": "⚪ Gray-50 (Tailwind) - Light background"
+        }
+      ]
+    },
+    {
+      "title": "REM Sizes & Typography",
+      "commands": [
+        {
+          "command": "1rem",
+          "description": "📏 16px (default) - Base font size"
+        },
+        {
+          "command": "0.75rem",
+          "description": "📏 12px - Small text (xs)"
+        },
+        {
+          "command": "0.875rem",
+          "description": "📏 14px - Small text (sm)"
+        },
+        {
+          "command": "1.125rem",
+          "description": "📏 18px - Large text (lg)"
+        },
+        {
+          "command": "1.25rem",
+          "description": "📏 20px - Extra large text (xl)"
+        },
+        {
+          "command": "1.5rem",
+          "description": "📏 24px - 2xl heading"
+        },
+        {
+          "command": "1.875rem",
+          "description": "📏 30px - 3xl heading"
+        },
+        {
+          "command": "2.25rem",
+          "description": "📏 36px - 4xl heading"
+        },
+        {
+          "command": "3rem",
+          "description": "📏 48px - 5xl large heading"
+        },
+        {
+          "command": "4rem",
+          "description": "📏 64px - 6xl extra large heading"
+        }
+      ]
+    },
+    {
+      "title": "Font Families",
+      "commands": [
+        {
+          "command": "font-family: 'Helvetica Neue', Arial, sans-serif;",
+          "description": "🔤 Modern sans-serif stack"
+        },
+        {
+          "command": "font-family: 'Times New Roman', Times, serif;",
+          "description": "🔤 Classic serif stack"
+        },
+        {
+          "command": "font-family: 'Courier New', Courier, monospace;",
+          "description": "🔤 Monospace for code"
+        },
+        {
+          "command": "font-family: system-ui, -apple-system, sans-serif;",
+          "description": "🔤 System font stack (native look)"
+        },
+        {
+          "command": "font-family: 'Inter', sans-serif;",
+          "description": "🔤 Inter - Modern web font"
+        },
+        {
+          "command": "font-family: 'Roboto', sans-serif;",
+          "description": "🔤 Roboto - Google's material design font"
+        },
+        {
+          "command": "font-family: 'Poppins', sans-serif;",
+          "description": "🔤 Poppins - Rounded, friendly font"
+        },
+        {
+          "command": "font-family: 'Fira Code', monospace;",
+          "description": "🔤 Fira Code - Code font with ligatures"
+        }
+      ]
+    },
+    {
+      "title": "Font Weights",
+      "commands": [
+        {
+          "command": "font-weight: 100;",
+          "description": "📝 Thin - Very light text"
+        },
+        {
+          "command": "font-weight: 300;",
+          "description": "📝 Light - Light text"
+        },
+        {
+          "command": "font-weight: 400;",
+          "description": "📝 Normal - Regular text (default)"
+        },
+        {
+          "command": "font-weight: 500;",
+          "description": "📝 Medium - Slightly bold"
+        },
+        {
+          "command": "font-weight: 600;",
+          "description": "📝 Semibold - Semi-bold text"
+        },
+        {
+          "command": "font-weight: 700;",
+          "description": "📝 Bold - Bold text"
+        },
+        {
+          "command": "font-weight: 800;",
+          "description": "📝 Extrabold - Extra bold text"
+        },
+        {
+          "command": "font-weight: 900;",
+          "description": "📝 Black - Heaviest weight"
+        }
+      ]
+    },
+    {
+      "title": "CSS Units Reference",
+      "commands": [
+        {
+          "command": "px",
+          "description": "📐 Pixels - Fixed size, not responsive"
+        },
+        {
+          "command": "rem",
+          "description": "📐 Root em - Relative to root font size (16px default)"
+        },
+        {
+          "command": "em",
+          "description": "📐 Em - Relative to parent font size"
+        },
+        {
+          "command": "%",
+          "description": "📐 Percentage - Relative to parent element"
+        },
+        {
+          "command": "vw",
+          "description": "📐 Viewport width - 1vw = 1% of viewport width"
+        },
+        {
+          "command": "vh",
+          "description": "📐 Viewport height - 1vh = 1% of viewport height"
+        },
+        {
+          "command": "vmin",
+          "description": "📐 Viewport minimum - Smaller of vw or vh"
+        },
+        {
+          "command": "vmax",
+          "description": "📐 Viewport maximum - Larger of vw or vh"
+        }
+      ]
+    },
+    {
+      "title": "Useful Design Tools",
+      "commands": [
+        {
+          "command": "https://coolors.co/",
+          "description": "🎨 Coolors - Color palette generator"
+        },
+        {
+          "command": "https://fonts.google.com/",
+          "description": "🔤 Google Fonts - Free web fonts"
+        },
+        {
+          "command": "https://www.figma.com/",
+          "description": "🎯 Figma - Design and prototyping tool"
+        },
+        {
+          "command": "https://tailwindcss.com/docs/customizing-colors",
+          "description": "🎨 Tailwind Colors - Complete color reference"
+        },
+        {
+          "command": "https://contrast-ratio.com/",
+          "description": "♿ Contrast Checker - Accessibility testing"
+        },
+        {
+          "command": "https://www.canva.com/colors/color-wheel/",
+          "description": "🌈 Color Wheel - Color theory tool"
+        }
+      ]
+    }
+  ]
+}
