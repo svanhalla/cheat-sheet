@@ -57,45 +57,75 @@ export default function PlaygroundPage() {
                   <label className="block text-sm font-medium mb-2">
                     Red: {red}
                   </label>
-                  <input
-                    type="range"
-                    min="0"
-                    max="255"
-                    value={red}
-                    onChange={(e) => setRed(parseInt(e.target.value))}
-                    className="w-full h-2 bg-red-200 rounded-lg appearance-none cursor-pointer"
-                    style={{background: `linear-gradient(to right, rgb(0,${green},${blue}), rgb(255,${green},${blue}))`}}
-                  />
+                  <div className="flex space-x-2">
+                    <input
+                      type="range"
+                      min="0"
+                      max="255"
+                      value={red}
+                      onChange={(e) => setRed(parseInt(e.target.value))}
+                      className="flex-1 h-2 bg-red-200 rounded-lg appearance-none cursor-pointer"
+                      style={{background: `linear-gradient(to right, rgb(0,${green},${blue}), rgb(255,${green},${blue}))`}}
+                    />
+                    <input
+                      type="number"
+                      min="0"
+                      max="255"
+                      value={red}
+                      onChange={(e) => setRed(Math.min(255, Math.max(0, parseInt(e.target.value) || 0)))}
+                      className="w-16 px-2 py-1 border border-gray-300 rounded text-sm"
+                    />
+                  </div>
                 </div>
                 
                 <div>
                   <label className="block text-sm font-medium mb-2">
                     Green: {green}
                   </label>
-                  <input
-                    type="range"
-                    min="0"
-                    max="255"
-                    value={green}
-                    onChange={(e) => setGreen(parseInt(e.target.value))}
-                    className="w-full h-2 bg-green-200 rounded-lg appearance-none cursor-pointer"
-                    style={{background: `linear-gradient(to right, rgb(${red},0,${blue}), rgb(${red},255,${blue}))`}}
-                  />
+                  <div className="flex space-x-2">
+                    <input
+                      type="range"
+                      min="0"
+                      max="255"
+                      value={green}
+                      onChange={(e) => setGreen(parseInt(e.target.value))}
+                      className="flex-1 h-2 bg-green-200 rounded-lg appearance-none cursor-pointer"
+                      style={{background: `linear-gradient(to right, rgb(${red},0,${blue}), rgb(${red},255,${blue}))`}}
+                    />
+                    <input
+                      type="number"
+                      min="0"
+                      max="255"
+                      value={green}
+                      onChange={(e) => setGreen(Math.min(255, Math.max(0, parseInt(e.target.value) || 0)))}
+                      className="w-16 px-2 py-1 border border-gray-300 rounded text-sm"
+                    />
+                  </div>
                 </div>
                 
                 <div>
                   <label className="block text-sm font-medium mb-2">
                     Blue: {blue}
                   </label>
-                  <input
-                    type="range"
-                    min="0"
-                    max="255"
-                    value={blue}
-                    onChange={(e) => setBlue(parseInt(e.target.value))}
-                    className="w-full h-2 bg-blue-200 rounded-lg appearance-none cursor-pointer"
-                    style={{background: `linear-gradient(to right, rgb(${red},${green},0), rgb(${red},${green},255))`}}
-                  />
+                  <div className="flex space-x-2">
+                    <input
+                      type="range"
+                      min="0"
+                      max="255"
+                      value={blue}
+                      onChange={(e) => setBlue(parseInt(e.target.value))}
+                      className="flex-1 h-2 bg-blue-200 rounded-lg appearance-none cursor-pointer"
+                      style={{background: `linear-gradient(to right, rgb(${red},${green},0), rgb(${red},${green},255))`}}
+                    />
+                    <input
+                      type="number"
+                      min="0"
+                      max="255"
+                      value={blue}
+                      onChange={(e) => setBlue(Math.min(255, Math.max(0, parseInt(e.target.value) || 0)))}
+                      className="w-16 px-2 py-1 border border-gray-300 rounded text-sm"
+                    />
+                  </div>
                 </div>
               </div>
 
