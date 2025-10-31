@@ -5,6 +5,7 @@ import { useState } from 'react'
 interface Command {
   command: string
   description: string
+  type?: 'terminal' | 'instruction' | 'code'
   copyable?: boolean
 }
 
@@ -62,21 +63,39 @@ export default function WorkflowStep({
     commandList.map((cmd, index) => {
       const id = `${prefix}${index}`
       const showCopy = cmd.copyable !== false // Default to true unless explicitly false
+      
+      // Determine styling based on command type
+      const getCommandStyles = () => {
+        switch (cmd.type) {
+          case 'terminal':
+            return 'bg-gray-900 text-green-400'
+          case 'instruction':
+            return 'bg-blue-100 text-blue-800'
+          default:
+            return 'bg-gray-100 text-gray-800'
+        }
+      }
+
+      const getCommandPrefix = () => {
+        switch (cmd.type) {
+          case 'terminal':
+            return '$ '
+          case 'instruction':
+            return '📁 '
+          default:
+            return ''
+        }
+      }
+
       return (
         <div key={index} className="bg-gray-50 rounded-lg p-4">
           <div className="flex items-start justify-between">
             <div className="flex-1">
               <div className="flex items-center mb-2">
                 {showCopy ? (
-                  isFileEdit ? (
-                    <div className="bg-blue-100 text-blue-800 px-3 py-1 rounded font-mono text-sm">
-                      📁 {cmd.command}
-                    </div>
-                  ) : (
-                    <div className="bg-gray-900 text-green-400 px-3 py-1 rounded font-mono text-sm">
-                      $ {cmd.command}
-                    </div>
-                  )
+                  <div className={`px-3 py-1 rounded font-mono text-sm ${getCommandStyles()}`}>
+                    {getCommandPrefix()}{cmd.command}
+                  </div>
                 ) : (
                   <div className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded font-mono text-sm">
                     💡 {cmd.command}

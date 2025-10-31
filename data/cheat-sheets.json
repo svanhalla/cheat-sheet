@@ -1,6 +1,7 @@
 {
   "sections": [
     "sections/maggie-workflows.json",
+    "sections/image-handling.json",
     "sections/git.json",
     "sections/seo.json",
     "sections/install-software.json",

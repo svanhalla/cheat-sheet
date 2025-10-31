@@ -1,0 +1,343 @@
+{
+  "id": "image-handling",
+  "title": "Image Handling - Maggie Site",
+  "description": "Complete guide for managing images on Maggie Taylor's website",
+  "icon": "🖼️",
+  "categories": [
+    {
+      "title": "File Structure Overview",
+      "commands": [
+        {
+          "command": "public/images/works/",
+          "description": "🎨 Art collections - organized by time periods and themes",
+          "type": "instruction"
+        },
+        {
+          "command": "public/images/books/",
+          "description": "📚 Book covers and gallery images",
+          "type": "instruction"
+        },
+        {
+          "command": "public/images/works/2022-2025/",
+          "description": "📁 Individual artwork folder for recent works",
+          "type": "instruction"
+        },
+        {
+          "command": "public/images/works/alice/",
+          "description": "🐰 Alice in Wonderland themed collection",
+          "type": "instruction"
+        },
+        {
+          "command": "public/images/works/ttlg/",
+          "description": "🪞 Through the Looking Glass collection",
+          "type": "instruction"
+        },
+        {
+          "command": "public/logo.svg",
+          "description": "🏷️ Site logo (SVG format for scalability)",
+          "type": "instruction"
+        }
+      ]
+    },
+    {
+      "title": "Adding New Artwork",
+      "commands": [
+        {
+          "command": "1. Add image to /public/images/works/[period]/",
+          "description": "📁 Place artwork file in appropriate collection folder",
+          "copyable": false
+        },
+        {
+          "command": "2. Edit data/works-[period].json",
+          "description": "📝 Add image metadata to corresponding JSON file",
+          "copyable": false
+        },
+        {
+          "command": "{\n  \"path\": \"/images/works/2022-2025/artwork-name.jpg\",\n  \"title\": \"Artwork Title\",\n  \"year\": \"2025\",\n  \"description\": \"Description here\",\n  \"medium\": \"Digital composite\",\n  \"visible\": true\n}",
+          "description": "📋 JSON structure for new artwork entry"
+        },
+        {
+          "command": "3. Use descriptive filenames",
+          "description": "💡 TIP: Use 'Big-big-plans.jpg' not 'img001.jpg'",
+          "copyable": false
+        },
+        {
+          "command": "4. Set visible: true",
+          "description": "✅ Make artwork visible on the website",
+          "copyable": false
+        }
+      ]
+    },
+    {
+      "title": "Homepage Random Images",
+      "commands": [
+        {
+          "command": "code data/homepage-random.json",
+          "description": "🎲 Configure rotating hero section images",
+          "type": "terminal"
+        },
+        {
+          "command": "{\n  \"images\": [\n    \"/images/works/2022-2025/The-surrealist.jpg\",\n    \"/images/works/alice/Mad-Tea-Party.jpg\"\n  ],\n  \"rotation\": true,\n  \"timer\": 30\n}",
+          "description": "📋 JSON structure for random image rotation"
+        },
+        {
+          "command": "Add image path to images array",
+          "description": "➕ Include new artworks in random rotation",
+          "copyable": false
+        },
+        {
+          "command": "Set timer: 30",
+          "description": "⏱️ Seconds between image changes (30 = 30 seconds)",
+          "copyable": false
+        },
+        {
+          "command": "Set rotation: false",
+          "description": "⏸️ Disable auto-rotation if needed",
+          "copyable": false
+        }
+      ]
+    },
+    {
+      "title": "Gallery Thumbnails",
+      "commands": [
+        {
+          "command": "code data/works.json",
+          "description": "🖼️ Configure collection thumbnails on works page",
+          "type": "terminal"
+        },
+        {
+          "command": "{\n  \"id\": \"2022-2025\",\n  \"title\": \"Recent Works\",\n  \"thumbnail\": \"/images/works/2022-2025/featured.jpg\",\n  \"randomize\": true,\n  \"timer\": 15,\n  \"visible\": true\n}",
+          "description": "📋 JSON structure for gallery thumbnail"
+        },
+        {
+          "command": "randomize: true",
+          "description": "🎲 Enable cycling through collection images",
+          "copyable": false
+        },
+        {
+          "command": "timer: 15",
+          "description": "⏱️ Seconds between thumbnail changes",
+          "copyable": false
+        },
+        {
+          "command": "thumbnail: \"path\"",
+          "description": "🖼️ Static fallback image when randomize is off",
+          "copyable": false
+        }
+      ]
+    },
+    {
+      "title": "Adding New Art Collection",
+      "commands": [
+        {
+          "command": "1. Create folder /public/images/works/[new-period]/",
+          "description": "📁 Create new collection folder (e.g., '2026-2027')",
+          "copyable": false
+        },
+        {
+          "command": "2. Add artwork images to folder",
+          "description": "🎨 Upload individual artwork files",
+          "copyable": false
+        },
+        {
+          "command": "3. Create data/works-[new-period].json",
+          "description": "📝 Create JSON file with artwork metadata",
+          "copyable": false
+        },
+        {
+          "command": "4. Add thumbnail /public/images/works/[new-period].jpg",
+          "description": "🖼️ Add collection thumbnail (same name as folder)",
+          "copyable": false
+        },
+        {
+          "command": "5. Add entry to data/works.json",
+          "description": "📋 Register collection on works page",
+          "copyable": false
+        },
+        {
+          "command": "6. Add to data/home.json → featuredGalleries",
+          "description": "🏠 Optionally feature on homepage",
+          "copyable": false
+        }
+      ]
+    },
+    {
+      "title": "Book Images",
+      "commands": [
+        {
+          "command": "code data/books.json",
+          "description": "📚 Configure book covers and details",
+          "type": "terminal"
+        },
+        {
+          "command": "{\n  \"id\": \"book-name\",\n  \"title\": \"Book Title\",\n  \"image\": \"/images/books/book-name.jpg\",\n  \"visible\": true\n}",
+          "description": "📋 JSON structure for book entry"
+        },
+        {
+          "command": "Add cover: /public/images/books/[book-id].jpg",
+          "description": "📖 Add book cover image (square aspect ratio works best)",
+          "copyable": false
+        },
+        {
+          "command": "Create folder: /public/images/books/[book-id]/",
+          "description": "📁 Create gallery folder for additional book images",
+          "copyable": false
+        },
+        {
+          "command": "npm run generate-books-details",
+          "description": "🔄 Auto-generate book gallery from folder contents"
+        }
+      ]
+    },
+    {
+      "title": "Removing Images",
+      "commands": [
+        {
+          "command": "1. Set visible: false in JSON",
+          "description": "👁️ Soft delete - hide image but keep file",
+          "copyable": false
+        },
+        {
+          "command": "2. Remove JSON entry completely",
+          "description": "🗑️ Hard delete - remove from configuration",
+          "copyable": false
+        },
+        {
+          "command": "3. Delete actual image file",
+          "description": "💾 Remove file to prevent orphaned images",
+          "copyable": false
+        },
+        {
+          "command": "4. Test the website",
+          "description": "🧪 Ensure no broken image links remain",
+          "copyable": false
+        },
+        {
+          "command": "rm /public/images/works/period/artwork.jpg",
+          "description": "🗑️ Command to delete image file",
+          "type": "terminal"
+        }
+      ]
+    },
+    {
+      "title": "Image Best Practices",
+      "commands": [
+        {
+          "command": "Use descriptive filenames",
+          "description": "📝 'Big-big-plans.jpg' not 'img001.jpg'",
+          "copyable": false
+        },
+        {
+          "command": "Use hyphens, avoid spaces",
+          "description": "🔤 'artwork-name.jpg' not 'artwork name.jpg'",
+          "copyable": false
+        },
+        {
+          "command": "Optimize file sizes for web",
+          "description": "📦 Compress images appropriately",
+          "copyable": false
+        },
+        {
+          "command": "Square covers for books",
+          "description": "📐 Book covers display best as square images",
+          "copyable": false
+        },
+        {
+          "command": "Always update JSON when adding images",
+          "description": "📋 Images need JSON references to appear",
+          "copyable": false
+        },
+        {
+          "command": "Group by purpose in folders",
+          "description": "📁 Works in works/, books in books/",
+          "copyable": false
+        }
+      ]
+    },
+    {
+      "title": "Development Commands",
+      "commands": [
+        {
+          "command": "npm run generate-books-details",
+          "description": "🔄 Generate book galleries after adding book images",
+          "type": "terminal"
+        },
+        {
+          "command": "npm run start:local",
+          "description": "🚀 Start development with all generation",
+          "type": "terminal"
+        },
+        {
+          "command": "npm run restart:local",
+          "description": "🔄 Restart development server",
+          "type": "terminal"
+        },
+        {
+          "command": "npm run build",
+          "description": "📦 Build for production deployment",
+          "type": "terminal"
+        }
+      ]
+    },
+    {
+      "title": "Troubleshooting Images",
+      "commands": [
+        {
+          "command": "Check file paths match JSON",
+          "description": "🔍 Ensure paths in JSON match actual file locations",
+          "copyable": false
+        },
+        {
+          "command": "Verify filenames exactly (case-sensitive)",
+          "description": "🔤 'Image.jpg' ≠ 'image.jpg' on some systems",
+          "copyable": false
+        },
+        {
+          "command": "Check visible: true in JSON",
+          "description": "👁️ Images must be marked visible to appear",
+          "copyable": false
+        },
+        {
+          "command": "Open browser console for 404 errors",
+          "description": "🔧 F12 → Console tab to see missing image errors",
+          "copyable": false
+        },
+        {
+          "command": "Verify images exist in /public/images/",
+          "description": "📁 Check files are actually in the correct directory",
+          "copyable": false
+        }
+      ]
+    },
+    {
+      "title": "Image Path Reference",
+      "commands": [
+        {
+          "command": "/images/works/2022-2025/artwork.jpg",
+          "description": "🎨 Recent artwork path format"
+        },
+        {
+          "command": "/images/works/alice/artwork.jpg",
+          "description": "🐰 Alice collection path format"
+        },
+        {
+          "command": "/images/works/ttlg/artwork.jpg",
+          "description": "🪞 Through the Looking Glass path format"
+        },
+        {
+          "command": "/images/books/book-name.jpg",
+          "description": "📚 Book cover path format"
+        },
+        {
+          "command": "/images/books/book-name/page1.jpg",
+          "description": "📖 Book gallery image path format"
+        },
+        {
+          "command": "All paths start with /images/",
+          "description": "💡 TIP: Always use absolute paths from /images/",
+          "copyable": false
+        }
+      ]
+    }
+  ]
+}

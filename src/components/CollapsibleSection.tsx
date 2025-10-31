@@ -3,12 +3,16 @@
 import { useState } from 'react'
 import CodeBlock from './CodeBlock'
 
+interface Command {
+  command: string
+  description: string
+  type?: 'terminal' | 'instruction' | 'code'
+  copyable?: boolean
+}
+
 interface CollapsibleSectionProps {
   title: string
-  commands: Array<{
-    command: string
-    description: string
-  }>
+  commands: Command[]
   defaultExpanded?: boolean
 }
 
@@ -67,6 +71,8 @@ export default function CollapsibleSection({
                   key={cmdIndex}
                   code={cmd.command}
                   description={cmd.description}
+                  type={cmd.type || 'code'}
+                  copyable={cmd.copyable !== false}
                 />
               )
             })}
