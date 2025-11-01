@@ -1,17 +1,110 @@
 'use client'
 
-import { useState } from 'react'
-
-interface Command {
-  command: string
-  description: string
-  type?: 'terminal' | 'instruction' | 'code'
-  copyable?: boolean
-}
+import { useState, useEffect } from 'react'
+import { useHashHighlight, useHashExpand } from '../hooks/useHashHighlight'
+import { Command } from '../utils/loadSections'
 
 interface Subsection {
   title: string
   commands: Command[]
+}
+
+interface CommandItemProps {
+  cmd: Command
+  index: number
+  prefix: string
+  copied: string | null
+  onCopy: (text: string, id: string) => void
+}
+
+function CommandItem({ cmd, index, prefix, copied, onCopy }: CommandItemProps) {
+  const [isHighlighted, setIsHighlighted] = useState(false)
+  
+  const id = `${prefix}${index}`
+  const showCopy = cmd.copyable !== false
+  
+  // Use the UUID directly from the command
+  const commandId = cmd.uuid
+
+  useEffect(() => {
+    const checkHash = () => {
+      const hash = window.location.hash.slice(1)
+      if (commandId && hash === commandId) {
+        setIsHighlighted(true)
+        setTimeout(() => {
+          document.getElementById(commandId)?.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+          })
+        }, 300)
+        setTimeout(() => setIsHighlighted(false), 4000)
+      }
+    }
+    
+    checkHash()
+    window.addEventListener('hashchange', checkHash)
+    return () => window.removeEventListener('hashchange', checkHash)
+  }, [commandId])
+
+  const getCommandStyles = () => {
+    switch (cmd.type) {
+      case 'terminal':
+        return 'bg-gray-900 text-green-400'
+      case 'instruction':
+        return 'bg-blue-100 text-blue-800'
+      default:
+        return 'bg-gray-100 text-gray-800'
+    }
+  }
+
+  const getCommandPrefix = () => {
+    switch (cmd.type) {
+      case 'terminal':
+        return '$ '
+      case 'instruction':
+        return '📁 '
+      default:
+        return ''
+    }
+  }
+
+  return (
+    <div 
+      id={commandId || undefined}
+      className={`bg-gray-50 rounded-lg p-4 transition-all duration-700 ${
+        isHighlighted ? 'ring-2 ring-blue-500 bg-gradient-to-r from-blue-50 to-blue-100 scale-[1.02]' : ''
+      }`}
+    >
+      <div className="flex items-start justify-between">
+        <div className="flex-1">
+          <div className="flex items-center mb-2">
+            {showCopy ? (
+              <div className={`px-3 py-1 rounded font-mono text-sm ${getCommandStyles()}`}>
+                {getCommandPrefix()}{cmd.command}
+              </div>
+            ) : (
+              <span className={`px-3 py-1 rounded font-mono text-sm ${getCommandStyles()}`}>
+                {getCommandPrefix()}{cmd.command}
+              </span>
+            )}
+          </div>
+          <p className="text-gray-600 text-sm">{cmd.description}</p>
+        </div>
+        {showCopy && (
+          <button
+            onClick={() => onCopy(cmd.command, id)}
+            className={`ml-3 px-3 py-1 text-xs rounded transition-colors ${
+              copied === id
+                ? 'bg-green-100 text-green-700'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            {copied === id ? '✓ Copied' : 'Copy'}
+          </button>
+        )}
+      </div>
+    </div>
+  )
 }
 
 interface WorkflowStepProps {
@@ -23,6 +116,8 @@ interface WorkflowStepProps {
   isFileEdit?: boolean
   isPublishStep?: boolean
   defaultExpanded?: boolean
+  sectionId?: string
+  categoryIndex?: number
 }
 
 export default function WorkflowStep({ 
@@ -33,11 +128,83 @@ export default function WorkflowStep({
   subsections = [],
   isFileEdit = false,
   isPublishStep = false,
-  defaultExpanded = false 
+  defaultExpanded = false,
+  sectionId,
+  categoryIndex
 }: WorkflowStepProps) {
   const [copied, setCopied] = useState<string | null>(null)
-  const [isExpanded, setIsExpanded] = useState(defaultExpanded)
   const [expandedSubsections, setExpandedSubsections] = useState<Set<number>>(new Set())
+
+  // Create URL-friendly ID from title
+  const stepId = title.toLowerCase().replace(/[^a-z0-9\s]/g, '').replace(/\s+/g, '-')
+  
+  // Only highlight if hash matches exactly this step (not commands)
+  const [isHighlighted, setIsHighlighted] = useState(false)
+  
+  useEffect(() => {
+    const checkHash = () => {
+      const hash = window.location.hash.slice(1)
+      // Only highlight if exact match and NOT a command
+      if (hash === stepId && !hash.startsWith('command-')) {
+        setIsHighlighted(true)
+        setTimeout(() => setIsHighlighted(false), 4000)
+      }
+    }
+    
+    checkHash()
+    window.addEventListener('hashchange', checkHash)
+    return () => window.removeEventListener('hashchange', checkHash)
+  }, [stepId])
+  
+  const shouldExpand = useHashExpand(stepId, sectionId, categoryIndex?.toString())
+  const [isExpanded, setIsExpanded] = useState(defaultExpanded || shouldExpand)
+
+  // Check if a UUID hash belongs to this step's commands
+  useEffect(() => {
+    const checkUUIDExpansion = () => {
+      const hash = window.location.hash.slice(1)
+      
+      // Check if hash is a UUID and belongs to our commands
+      if (hash.match(/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/)) {
+        // Check direct commands
+        const directCommandExists = commands.some(cmd => cmd.uuid === hash)
+        
+        // Check subsection commands
+        const subsectionCommandExists = subsections.some(subsection => 
+          subsection.commands.some(cmd => cmd.uuid === hash)
+        )
+        
+        if (directCommandExists || subsectionCommandExists) {
+          setIsExpanded(true)
+        }
+      }
+    }
+    
+    checkUUIDExpansion()
+    window.addEventListener('hashchange', checkUUIDExpansion)
+    return () => window.removeEventListener('hashchange', checkUUIDExpansion)
+  }, [commands, subsections])
+
+  // Update expansion when shouldExpand changes
+  useEffect(() => {
+    if (shouldExpand) setIsExpanded(true)
+  }, [shouldExpand])
+
+  // Handle command highlighting and scrolling
+  useEffect(() => {
+    const hash = window.location.hash.slice(1)
+    if (hash.startsWith('command-') && sectionId && categoryIndex !== undefined) {
+      // Check if this hash belongs to this WorkflowStep
+      if (hash.startsWith(`command-${sectionId}-${categoryIndex}`)) {
+        setTimeout(() => {
+          document.getElementById(hash)?.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+          })
+        }, 300)
+      }
+    }
+  }, [sectionId, categoryIndex])
 
   const copyToClipboard = async (text: string, id: string) => {
     try {
@@ -59,80 +226,26 @@ export default function WorkflowStep({
     setExpandedSubsections(newExpanded)
   }
 
-  const renderCommands = (commandList: Command[], prefix: string = '') => (
-    commandList.map((cmd, index) => {
-      const id = `${prefix}${index}`
-      const showCopy = cmd.copyable !== false // Default to true unless explicitly false
-      
-      // Determine styling based on command type
-      const getCommandStyles = () => {
-        switch (cmd.type) {
-          case 'terminal':
-            return 'bg-gray-900 text-green-400'
-          case 'instruction':
-            return 'bg-blue-100 text-blue-800'
-          default:
-            return 'bg-gray-100 text-gray-800'
-        }
-      }
-
-      const getCommandPrefix = () => {
-        switch (cmd.type) {
-          case 'terminal':
-            return '$ '
-          case 'instruction':
-            return '📁 '
-          default:
-            return ''
-        }
-      }
-
-      return (
-        <div key={index} className="bg-gray-50 rounded-lg p-4">
-          <div className="flex items-start justify-between">
-            <div className="flex-1">
-              <div className="flex items-center mb-2">
-                {showCopy ? (
-                  <div className={`px-3 py-1 rounded font-mono text-sm ${getCommandStyles()}`}>
-                    {getCommandPrefix()}{cmd.command}
-                  </div>
-                ) : (
-                  <div className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded font-mono text-sm">
-                    💡 {cmd.command}
-                  </div>
-                )}
-                {showCopy && (
-                  <button
-                    onClick={() => copyToClipboard(cmd.command, id)}
-                    className="ml-2 p-1 text-gray-500 hover:text-gray-700 hover:bg-gray-200 rounded transition-colors"
-                    title={copied === id ? "Copied!" : "Copy to clipboard"}
-                  >
-                    {copied === id ? (
-                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    ) : (
-                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path>
-                        <path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
-                      </svg>
-                    )}
-                  </button>
-                )}
-              </div>
-              <p className="text-gray-600 text-sm">{cmd.description}</p>
-            </div>
-          </div>
-        </div>
-      )
-    })
+  const renderCommands = (commandList: Command[], prefix: string = '', subsectionIndex?: number) => (
+    commandList.map((cmd, index) => (
+      <CommandItem
+        key={index}
+        cmd={cmd}
+        index={index}
+        prefix={prefix}
+        copied={copied}
+        onCopy={copyToClipboard}
+      />
+    ))
   )
 
   return (
-    <div className={`rounded-lg shadow-sm border mb-6 ${
-      isPublishStep 
-        ? 'bg-red-50 border-red-200' 
-        : 'bg-white border-gray-200'
+    <div id={stepId} className={`rounded-lg shadow-sm border mb-6 transition-all duration-700 ${
+      isHighlighted 
+        ? 'border-blue-500 shadow-xl bg-gradient-to-r from-blue-50 to-blue-100 scale-[1.02]' 
+        : isPublishStep 
+          ? 'bg-red-50 border-red-200' 
+          : 'bg-white border-gray-200'
     }`}>
       <button
         onClick={() => setIsExpanded(!isExpanded)}

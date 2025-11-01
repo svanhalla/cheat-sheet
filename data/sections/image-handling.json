@@ -10,34 +10,41 @@
         {
           "command": "public/images/works/",
           "description": "🎨 Art collections - organized by time periods and themes",
-          "type": "instruction"
+          "type": "instruction",
+          "uuid": "874da717-7d59-4f9f-b2dd-205b21f021e8"
         },
         {
           "command": "public/images/books/",
           "description": "📚 Book covers and gallery images",
-          "type": "instruction"
+          "type": "instruction",
+          "uuid": "60fde976-9c84-493d-9d51-31288ebaff22"
         },
         {
           "command": "public/images/works/2022-2025/",
           "description": "📁 Individual artwork folder for recent works",
-          "type": "instruction"
+          "type": "instruction",
+          "uuid": "1b2c8fa7-7d1a-4093-8ff0-eede41623992"
         },
         {
           "command": "public/images/works/alice/",
           "description": "🐰 Alice in Wonderland themed collection",
-          "type": "instruction"
+          "type": "instruction",
+          "uuid": "125d3cbf-e721-4d28-afb0-2c074d66380a"
         },
         {
           "command": "public/images/works/ttlg/",
           "description": "🪞 Through the Looking Glass collection",
-          "type": "instruction"
+          "type": "instruction",
+          "uuid": "5a8f52cc-af77-4f44-85a9-d44df754a90f"
         },
         {
           "command": "public/logo.svg",
           "description": "🏷️ Site logo (SVG format for scalability)",
-          "type": "instruction"
+          "type": "instruction",
+          "uuid": "8eccf04e-382e-42a2-a65e-b1146bf993e8"
         }
-      ]
+      ],
+      "uuid": "3d89ef6b-e850-41ba-9c8c-57fa3e982af4"
     },
     {
       "title": "Adding New Artwork",
@@ -45,28 +52,34 @@
         {
           "command": "1. Add image to /public/images/works/[period]/",
           "description": "📁 Place artwork file in appropriate collection folder",
-          "copyable": false
+          "copyable": false,
+          "uuid": "213cf3d0-4fb1-404a-9599-98911f58c01f"
         },
         {
           "command": "2. Edit data/works-[period].json",
           "description": "📝 Add image metadata to corresponding JSON file",
-          "copyable": false
+          "copyable": false,
+          "uuid": "500c2a4c-43e1-4bb6-a210-97158ccc55d7"
         },
         {
           "command": "{\n  \"path\": \"/images/works/2022-2025/artwork-name.jpg\",\n  \"title\": \"Artwork Title\",\n  \"year\": \"2025\",\n  \"description\": \"Description here\",\n  \"medium\": \"Digital composite\",\n  \"visible\": true\n}",
-          "description": "📋 JSON structure for new artwork entry"
+          "description": "📋 JSON structure for new artwork entry",
+          "uuid": "9007098c-abbe-4776-9208-a72062a96ee1"
         },
         {
           "command": "3. Use descriptive filenames",
           "description": "💡 TIP: Use 'Big-big-plans.jpg' not 'img001.jpg'",
-          "copyable": false
+          "copyable": false,
+          "uuid": "0da123d5-7b2c-4a84-802a-c687fc01f63c"
         },
         {
           "command": "4. Set visible: true",
           "description": "✅ Make artwork visible on the website",
-          "copyable": false
+          "copyable": false,
+          "uuid": "1afb1554-50ed-4257-a28a-b1f44919dcdd"
         }
-      ]
+      ],
+      "uuid": "6e263003-0465-4c1e-99da-9f57749037c3"
     },
     {
       "title": "Homepage Random Images",
@@ -74,28 +87,34 @@
         {
           "command": "code data/homepage-random.json",
           "description": "🎲 Configure rotating hero section images",
-          "type": "terminal"
+          "type": "terminal",
+          "uuid": "a896af46-7def-49ac-8ac8-233b371c0bcc"
         },
         {
           "command": "{\n  \"images\": [\n    \"/images/works/2022-2025/The-surrealist.jpg\",\n    \"/images/works/alice/Mad-Tea-Party.jpg\"\n  ],\n  \"rotation\": true,\n  \"timer\": 30\n}",
-          "description": "📋 JSON structure for random image rotation"
+          "description": "📋 JSON structure for random image rotation",
+          "uuid": "6da04149-16ea-4283-a18b-074fa2d4b2be"
         },
         {
           "command": "Add image path to images array",
           "description": "➕ Include new artworks in random rotation",
-          "copyable": false
+          "copyable": false,
+          "uuid": "bc78da13-e851-4e55-8073-90ba1ee1cc77"
         },
         {
           "command": "Set timer: 30",
           "description": "⏱️ Seconds between image changes (30 = 30 seconds)",
-          "copyable": false
+          "copyable": false,
+          "uuid": "ddafeb0c-764b-4ebf-bdc2-9b6b1983edf5"
         },
         {
           "command": "Set rotation: false",
           "description": "⏸️ Disable auto-rotation if needed",
-          "copyable": false
+          "copyable": false,
+          "uuid": "9121b4f2-542e-4529-a038-72759af03247"
         }
-      ]
+      ],
+      "uuid": "817773e0-c617-4b0d-94cc-303733760333"
     },
     {
       "title": "Gallery Thumbnails",
@@ -103,28 +122,34 @@
         {
           "command": "code data/works.json",
           "description": "🖼️ Configure collection thumbnails on works page",
-          "type": "terminal"
+          "type": "terminal",
+          "uuid": "fcc98099-85dc-47d3-bfc3-3162270ce1bb"
         },
         {
           "command": "{\n  \"id\": \"2022-2025\",\n  \"title\": \"Recent Works\",\n  \"thumbnail\": \"/images/works/2022-2025/featured.jpg\",\n  \"randomize\": true,\n  \"timer\": 15,\n  \"visible\": true\n}",
-          "description": "📋 JSON structure for gallery thumbnail"
+          "description": "📋 JSON structure for gallery thumbnail",
+          "uuid": "12dfd670-d06e-40c0-acf8-ae33d64927aa"
         },
         {
           "command": "randomize: true",
           "description": "🎲 Enable cycling through collection images",
-          "copyable": false
+          "copyable": false,
+          "uuid": "070c73af-4adf-4fa9-9b33-ec89f0a55487"
         },
         {
           "command": "timer: 15",
           "description": "⏱️ Seconds between thumbnail changes",
-          "copyable": false
+          "copyable": false,
+          "uuid": "7ef69bbd-4a0f-42db-97b1-be17765fdb6d"
         },
         {
           "command": "thumbnail: \"path\"",
           "description": "🖼️ Static fallback image when randomize is off",
-          "copyable": false
+          "copyable": false,
+          "uuid": "1379b06e-3539-40e3-9318-f4c5e67ebcd6"
         }
-      ]
+      ],
+      "uuid": "b5cbe2b7-6535-45d1-b6ee-b4434835f5ce"
     },
     {
       "title": "Adding New Art Collection",
@@ -132,34 +157,41 @@
         {
           "command": "1. Create folder /public/images/works/[new-period]/",
           "description": "📁 Create new collection folder (e.g., '2026-2027')",
-          "copyable": false
+          "copyable": false,
+          "uuid": "055f47ef-80c1-4cea-9216-ecf1bc586a95"
         },
         {
           "command": "2. Add artwork images to folder",
           "description": "🎨 Upload individual artwork files",
-          "copyable": false
+          "copyable": false,
+          "uuid": "3b6674fa-8173-4c07-9a53-68ae0191facd"
         },
         {
           "command": "3. Create data/works-[new-period].json",
           "description": "📝 Create JSON file with artwork metadata",
-          "copyable": false
+          "copyable": false,
+          "uuid": "df956e46-5e56-4093-bde2-ac979e6b8e56"
         },
         {
           "command": "4. Add thumbnail /public/images/works/[new-period].jpg",
           "description": "🖼️ Add collection thumbnail (same name as folder)",
-          "copyable": false
+          "copyable": false,
+          "uuid": "902d11c5-083b-4e3f-8ad7-636835e040b4"
         },
         {
           "command": "5. Add entry to data/works.json",
           "description": "📋 Register collection on works page",
-          "copyable": false
+          "copyable": false,
+          "uuid": "8689177a-9357-4238-a44f-a09dd66efaff"
         },
         {
           "command": "6. Add to data/home.json → featuredGalleries",
           "description": "🏠 Optionally feature on homepage",
-          "copyable": false
+          "copyable": false,
+          "uuid": "5fdb7e41-e0fc-4b8c-8956-7dadad44eb65"
         }
-      ]
+      ],
+      "uuid": "99fc5204-6581-4956-9742-f3019350f69e"
     },
     {
       "title": "Book Images",
@@ -167,27 +199,33 @@
         {
           "command": "code data/books.json",
           "description": "📚 Configure book covers and details",
-          "type": "terminal"
+          "type": "terminal",
+          "uuid": "0d40f93b-778f-4ce7-a107-40b1e4a3a710"
         },
         {
           "command": "{\n  \"id\": \"book-name\",\n  \"title\": \"Book Title\",\n  \"image\": \"/images/books/book-name.jpg\",\n  \"visible\": true\n}",
-          "description": "📋 JSON structure for book entry"
+          "description": "📋 JSON structure for book entry",
+          "uuid": "42763494-acc4-4600-8ac3-5ddbb862c2b5"
         },
         {
           "command": "Add cover: /public/images/books/[book-id].jpg",
           "description": "📖 Add book cover image (square aspect ratio works best)",
-          "copyable": false
+          "copyable": false,
+          "uuid": "791dd633-aead-43e9-9d32-a0ff6ac8aca0"
         },
         {
           "command": "Create folder: /public/images/books/[book-id]/",
           "description": "📁 Create gallery folder for additional book images",
-          "copyable": false
+          "copyable": false,
+          "uuid": "16599ab7-c674-43c9-9311-b6f26b3d0d67"
         },
         {
           "command": "npm run generate-books-details",
-          "description": "🔄 Auto-generate book gallery from folder contents"
+          "description": "🔄 Auto-generate book gallery from folder contents",
+          "uuid": "b3cabc4b-ea51-47e6-b6b6-c438ba511f95"
         }
-      ]
+      ],
+      "uuid": "d2ce8b40-1531-4ee8-9b11-fa015ac7554b"
     },
     {
       "title": "Removing Images",
@@ -195,29 +233,35 @@
         {
           "command": "1. Set visible: false in JSON",
           "description": "👁️ Soft delete - hide image but keep file",
-          "copyable": false
+          "copyable": false,
+          "uuid": "d1791916-3b78-41e5-8996-54d5088a5647"
         },
         {
           "command": "2. Remove JSON entry completely",
           "description": "🗑️ Hard delete - remove from configuration",
-          "copyable": false
+          "copyable": false,
+          "uuid": "6f81f00d-c124-40f0-b188-fd2415d4ab05"
         },
         {
           "command": "3. Delete actual image file",
           "description": "💾 Remove file to prevent orphaned images",
-          "copyable": false
+          "copyable": false,
+          "uuid": "92d213b3-fe00-4e61-ae83-367deb78c7c0"
         },
         {
           "command": "4. Test the website",
           "description": "🧪 Ensure no broken image links remain",
-          "copyable": false
+          "copyable": false,
+          "uuid": "ef643922-cf9f-4990-9788-4764e14d92fc"
         },
         {
           "command": "rm /public/images/works/period/artwork.jpg",
           "description": "🗑️ Command to delete image file",
-          "type": "terminal"
+          "type": "terminal",
+          "uuid": "af35b6ae-eb91-44da-8b52-f9b8f65aaf00"
         }
-      ]
+      ],
+      "uuid": "e1657dd2-adfb-4a87-adf0-6ce8014ef9a3"
     },
     {
       "title": "Image Best Practices",
@@ -225,34 +269,41 @@
         {
           "command": "Use descriptive filenames",
           "description": "📝 'Big-big-plans.jpg' not 'img001.jpg'",
-          "copyable": false
+          "copyable": false,
+          "uuid": "89740324-46aa-466b-914b-d1b00e82bbf4"
         },
         {
           "command": "Use hyphens, avoid spaces",
           "description": "🔤 'artwork-name.jpg' not 'artwork name.jpg'",
-          "copyable": false
+          "copyable": false,
+          "uuid": "7a2721a0-6ad4-4510-ad56-512f5a2a4b91"
         },
         {
           "command": "Optimize file sizes for web",
           "description": "📦 Compress images appropriately",
-          "copyable": false
+          "copyable": false,
+          "uuid": "e8d40b64-5753-49ab-beeb-478011023202"
         },
         {
           "command": "Square covers for books",
           "description": "📐 Book covers display best as square images",
-          "copyable": false
+          "copyable": false,
+          "uuid": "20acdbcf-7010-4091-af72-14d89c83a6c3"
         },
         {
           "command": "Always update JSON when adding images",
           "description": "📋 Images need JSON references to appear",
-          "copyable": false
+          "copyable": false,
+          "uuid": "47d97b0d-738c-4a01-9d2b-dad2558907ae"
         },
         {
           "command": "Group by purpose in folders",
           "description": "📁 Works in works/, books in books/",
-          "copyable": false
+          "copyable": false,
+          "uuid": "aa05ada4-1516-4668-9f38-48c44d9060bb"
         }
-      ]
+      ],
+      "uuid": "05a26bf3-a436-4898-9e05-5b28f57220d0"
     },
     {
       "title": "Development Commands",
@@ -260,24 +311,29 @@
         {
           "command": "npm run generate-books-details",
           "description": "🔄 Generate book galleries after adding book images",
-          "type": "terminal"
+          "type": "terminal",
+          "uuid": "dcbd04ec-49a8-4da9-b3da-47ac01c50f8a"
         },
         {
           "command": "npm run start:local",
           "description": "🚀 Start development with all generation",
-          "type": "terminal"
+          "type": "terminal",
+          "uuid": "37f006fe-d7ec-44ef-a45a-1baf2298474f"
         },
         {
           "command": "npm run restart:local",
           "description": "🔄 Restart development server",
-          "type": "terminal"
+          "type": "terminal",
+          "uuid": "0f835afe-c4d8-4ef6-8958-36ac61b009b2"
         },
         {
           "command": "npm run build",
           "description": "📦 Build for production deployment",
-          "type": "terminal"
+          "type": "terminal",
+          "uuid": "af9a7a64-acf0-4edc-9998-be1c3640c761"
         }
-      ]
+      ],
+      "uuid": "9cd84c79-50ee-471b-8da9-0b1fba46aa8c"
     },
     {
       "title": "Troubleshooting Images",
@@ -285,59 +341,72 @@
         {
           "command": "Check file paths match JSON",
           "description": "🔍 Ensure paths in JSON match actual file locations",
-          "copyable": false
+          "copyable": false,
+          "uuid": "bd3af737-a075-426d-98a3-fe2fe5e16826"
         },
         {
           "command": "Verify filenames exactly (case-sensitive)",
           "description": "🔤 'Image.jpg' ≠ 'image.jpg' on some systems",
-          "copyable": false
+          "copyable": false,
+          "uuid": "e8424107-5e70-487c-b89d-e7bbee212770"
         },
         {
           "command": "Check visible: true in JSON",
           "description": "👁️ Images must be marked visible to appear",
-          "copyable": false
+          "copyable": false,
+          "uuid": "5209628a-8677-4fcf-b889-8487698f0a34"
         },
         {
           "command": "Open browser console for 404 errors",
           "description": "🔧 F12 → Console tab to see missing image errors",
-          "copyable": false
+          "copyable": false,
+          "uuid": "fcf020a9-d441-49de-8659-4579dd755ff1"
         },
         {
           "command": "Verify images exist in /public/images/",
           "description": "📁 Check files are actually in the correct directory",
-          "copyable": false
+          "copyable": false,
+          "uuid": "9533e045-b397-4029-9bd2-bc5216f3a9d9"
         }
-      ]
+      ],
+      "uuid": "bc1988eb-dccd-4696-9363-0b7f33f4e25f"
     },
     {
       "title": "Image Path Reference",
       "commands": [
         {
           "command": "/images/works/2022-2025/artwork.jpg",
-          "description": "🎨 Recent artwork path format"
+          "description": "🎨 Recent artwork path format",
+          "uuid": "52b87492-c8e4-482d-9363-a47149dfffd1"
         },
         {
           "command": "/images/works/alice/artwork.jpg",
-          "description": "🐰 Alice collection path format"
+          "description": "🐰 Alice collection path format",
+          "uuid": "1a6a1906-cd72-4c2d-9252-2b7e682c4950"
         },
         {
           "command": "/images/works/ttlg/artwork.jpg",
-          "description": "🪞 Through the Looking Glass path format"
+          "description": "🪞 Through the Looking Glass path format",
+          "uuid": "4667de7c-5072-4b95-88bb-5eaa5e8dfaa8"
         },
         {
           "command": "/images/books/book-name.jpg",
-          "description": "📚 Book cover path format"
+          "description": "📚 Book cover path format",
+          "uuid": "6b1a283b-d762-4cbb-b4b4-94511641ee67"
         },
         {
           "command": "/images/books/book-name/page1.jpg",
-          "description": "📖 Book gallery image path format"
+          "description": "📖 Book gallery image path format",
+          "uuid": "7dc0ebb8-9f21-46e4-9a8e-114861f012ed"
         },
         {
           "command": "All paths start with /images/",
           "description": "💡 TIP: Always use absolute paths from /images/",
-          "copyable": false
+          "copyable": false,
+          "uuid": "2f2a287e-163f-4daf-9b6d-943ab48d6c45"
         }
-      ]
+      ],
+      "uuid": "f9fbc090-04a7-493c-b87b-4553157eb1d7"
     }
   ]
 }

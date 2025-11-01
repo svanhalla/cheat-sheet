@@ -40,7 +40,11 @@ Implement client-side search for the cheat sheet static site to allow users to q
       "description": "Check repository status and see what files have changed",
       "section": "git",
       "sectionTitle": "Git",
+      "sectionIcon": "🔧",
+      "sectionColor": "green",
       "category": "Basic Commands",
+      "type": "terminal",
+      "typeIcon": "🖥️",
       "keywords": ["status", "check", "files", "changes"],
       "url": "/git#basic-commands"
     }
@@ -48,6 +52,7 @@ Implement client-side search for the cheat sheet static site to allow users to q
   "metadata": {
     "totalItems": 150,
     "sections": ["git", "seo", "install-software", "nextjs", "aws", "maggie-workflows"],
+    "commandTypes": ["terminal", "instruction", "code"],
     "buildTime": "2025-10-30T05:22:00Z"
   }
 }
@@ -63,7 +68,11 @@ Implement client-side search for the cheat sheet static site to allow users to q
 - Highlight matching terms
 - Keyboard navigation (↑↓ arrows, Enter)
 - Category/section filtering
+- Command type filtering (terminal/instruction/code)
 - Recent searches (localStorage)
+- Popular commands tracking
+- Voice search (Web Speech API)
+- Search suggestions and autocomplete
 
 **Search Algorithm**:
 1. **Exact matches** (highest priority)
@@ -80,9 +89,13 @@ Implement client-side search for the cheat sheet static site to allow users to q
 
 **Results Display**:
 - Dropdown overlay with results
-- Show: command, description, section badge
+- Show: command, description, section badge, command type badge
+- Section color coding (Git=green, CSS=blue, SEO=purple, etc.)
+- Command type indicators (🖥️ terminal, 📋 instruction, 📝 code)
+- Command prefix display ($ for terminal, 📁 for instructions)
 - Click to navigate to specific section
 - "Show all X results" link for extensive results
+- Breadcrumb navigation: "Section > Category > Command"
 
 **Visual Design**:
 - GitHub-style search interface
@@ -317,7 +330,126 @@ function processCommand(command, sectionId, categoryId, commandIndex) {
 
 This deep linking system will make the cheat sheet much more useful for sharing, bookmarking, and referencing specific commands!
 
-### Advanced Search
+## Enhanced User Experience Features
+
+### Keyboard Shortcuts
+```javascript
+// Primary shortcuts
+- Cmd/Ctrl + K: Open search modal
+- Escape: Close search / Clear input
+- Enter: Navigate to first result
+- Cmd/Ctrl + Enter: Open result in new tab
+- ↑↓ Arrow keys: Navigate results
+- Tab / Shift+Tab: Navigate filters
+- Cmd/Ctrl + /: Toggle search help
+
+// Advanced shortcuts
+- Cmd/Ctrl + 1-9: Jump to section filter
+- Cmd/Ctrl + Shift + C: Copy command to clipboard
+- Cmd/Ctrl + Shift + L: Copy command URL
+- Alt + Enter: Add to bookmarks
+```
+
+### Command Type Filtering
+- **Terminal Commands** (🖥️): Filter executable shell commands
+- **Instructions** (📋): Filter file operations and setup steps  
+- **Code Examples** (📝): Filter JSON, CSS, and configuration snippets
+- **All Types**: Show everything (default)
+
+### Visual Search Indicators
+```css
+/* Section color coding */
+.section-git { border-left: 4px solid #10b981; } /* Green */
+.section-css { border-left: 4px solid #3b82f6; } /* Blue */
+.section-seo { border-left: 4px solid #8b5cf6; } /* Purple */
+.section-install { border-left: 4px solid #f59e0b; } /* Orange */
+.section-nextjs { border-left: 4px solid #000000; } /* Black */
+.section-aws { border-left: 4px solid #ff9900; } /* AWS Orange */
+
+/* Command type badges */
+.type-terminal { background: #1f2937; color: #10b981; }
+.type-instruction { background: #dbeafe; color: #1e40af; }
+.type-code { background: #f3f4f6; color: #374151; }
+```
+
+### Search Analytics (Client-Side)
+```javascript
+// Track in localStorage
+{
+  "searchHistory": ["git status", "npm install", "css colors"],
+  "popularCommands": {
+    "git-status": 15,
+    "npm-install": 12,
+    "css-rgb": 8
+  },
+  "bookmarkedCommands": ["git-status", "brew-install"],
+  "recentSessions": [
+    {
+      "timestamp": "2025-10-31T18:00:00Z",
+      "commands": ["git-status", "git-commit"]
+    }
+  ]
+}
+```
+
+### Mobile Experience Enhancements
+- **Touch-friendly**: Large tap targets (44px minimum)
+- **Swipe gestures**: Swipe left/right to navigate results
+- **Voice search**: "Hey, find git commands" using Web Speech API
+- **Haptic feedback**: Vibration on result selection (iOS/Android)
+- **Pull-to-refresh**: Update search index
+- **Offline indicator**: Show when search index is cached
+
+### Search Context Awareness
+```javascript
+// Context-based features
+- Recent commands from current session
+- Section-specific search when on a section page
+- Related commands suggestions
+- "People also searched for" based on patterns
+- Smart autocomplete based on typing patterns
+- Typo correction with "Did you mean?" suggestions
+```
+
+### Export & Sharing Features
+```javascript
+// Export options
+- Share search results as URL: /search?q=git&type=terminal
+- Export command list as Markdown
+- Export as plain text for documentation
+- Print-friendly search results page
+- Copy multiple commands to clipboard
+- Generate shareable command collections
+
+// Social sharing
+- Share individual commands on Twitter/LinkedIn
+- Generate command cards for social media
+- Create custom cheat sheet collections
+- Export as PDF for offline reference
+```
+
+### Progressive Enhancement
+```javascript
+// Fallback strategies
+- Graceful degradation when JavaScript disabled
+- Service worker for offline search capability
+- Search index versioning for cache invalidation
+- Lazy loading of search components
+- Progressive loading of search index
+- Fallback to section navigation if search fails
+```
+
+### Search Performance Optimization
+```javascript
+// Advanced performance features
+- Virtual scrolling for large result sets
+- Debounced search with smart delays
+- Result caching and memoization
+- Incremental search index loading
+- Background index updates
+- Search result prefetching
+- Intelligent result ranking based on usage
+```
 - **Filters**: By section, category, command type
 - **Operators**: "git status" (exact), git* (wildcard)
 - **Shortcuts**: Recent searches, popular commands
@@ -336,22 +468,28 @@ This deep linking system will make the cheat sheet much more useful for sharing,
 ## Implementation Phases
 
 ### Phase 1: Basic Search (MVP)
-- Build-time index generation
-- Simple text matching
-- Basic search component
-- Navigate to sections
+- Build-time index generation with command types
+- Simple text matching and fuzzy search
+- Basic search component with keyboard shortcuts
+- Command type filtering (terminal/instruction/code)
+- Navigate to sections with deep linking
+- Visual indicators and section color coding
 
 ### Phase 2: Enhanced Search
-- Fuzzy matching
-- Keyboard shortcuts
-- Search highlighting
-- Result ranking
+- Advanced fuzzy matching and typo correction
+- Search analytics and popular commands tracking
+- Search highlighting and breadcrumb navigation
+- Mobile optimizations and touch gestures
+- Voice search integration
+- Result ranking and caching
 
 ### Phase 3: Advanced Features
-- Search filters
-- Search history
-- Popular commands
-- Search analytics (client-side)
+- Export and sharing functionality
+- Progressive enhancement and offline support
+- Search suggestions and autocomplete
+- Command bookmarking and collections
+- Performance optimizations (virtual scrolling)
+- Social sharing and PDF export
 
 ## File Structure
 

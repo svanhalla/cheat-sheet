@@ -4,6 +4,7 @@ import { loadAllSections, loadSection } from '../../utils/loadSections'
 import CodeBlock from '../../components/CodeBlock'
 import WorkflowStep from '../../components/WorkflowStep'
 import CollapsibleSection from '../../components/CollapsibleSection'
+import SearchWrapper from '../../components/SearchWrapper'
 
 interface PageProps {
   params: Promise<{
@@ -27,7 +28,7 @@ export default async function SectionPage({ params }: PageProps) {
   }
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" id={sectionId}>
       <header className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between py-6">
@@ -40,6 +41,7 @@ export default async function SectionPage({ params }: PageProps) {
                 <h1 className="text-3xl font-bold text-primary">{section.title}</h1>
               </div>
             </div>
+            <SearchWrapper />
           </div>
         </div>
       </header>
@@ -51,7 +53,7 @@ export default async function SectionPage({ params }: PageProps) {
             <div className="space-y-6">
               {section.categories.map((category, categoryIndex) => (
                 <WorkflowStep
-                  key={categoryIndex}
+                  key={category.uuid}
                   stepNumber={categoryIndex + 1}
                   title={category.title}
                   purpose={category.purpose || ''}
@@ -59,7 +61,9 @@ export default async function SectionPage({ params }: PageProps) {
                   subsections={category.subsections || []}
                   isFileEdit={category.title.includes('Making Content Changes')}
                   isPublishStep={category.isPublishStep || false}
-                  defaultExpanded={categoryIndex === 0}
+                  defaultExpanded={false}
+                  sectionId={section.id}
+                  categoryIndex={categoryIndex}
                 />
               ))}
             </div>
@@ -68,10 +72,12 @@ export default async function SectionPage({ params }: PageProps) {
             <div className="space-y-6">
               {section.categories.map((category, categoryIndex) => (
                 <CollapsibleSection
-                  key={categoryIndex}
+                  key={category.uuid}
                   title={category.title}
                   commands={category.commands || []}
-                  defaultExpanded={categoryIndex === 0}
+                  defaultExpanded={false}
+                  sectionId={section.id}
+                  categoryId={category.uuid}
                 />
               ))}
             </div>

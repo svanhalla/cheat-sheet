@@ -3,17 +3,21 @@ import path from 'path'
 import cheatSheetsIndex from '../../data/cheat-sheets.json'
 
 export interface Command {
+  uuid: string
   command: string
   description: string
+  type?: 'terminal' | 'instruction' | 'code'
   copyable?: boolean
 }
 
 export interface Subsection {
+  uuid: string
   title: string
   commands: Command[]
 }
 
 export interface Category {
+  uuid: string
   title: string
   purpose?: string
   commands?: Command[]

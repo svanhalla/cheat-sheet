@@ -5,24 +5,29 @@
   "icon": "🔧",
   "categories": [
     {
+      "uuid": "ba32a730-342a-4585-9c38-320f67d7e2f4",
       "title": "Opening Terminal",
       "commands": [
         {
+          "uuid": "ca2907a2-1667-4c49-a1e3-141a04aa40db",
           "command": "⌘ + Space → type 'terminal' → Enter",
           "description": "🚀 FASTEST: Press Command + Space keys together, type 'terminal', press Enter",
           "copyable": false
         },
         {
+          "uuid": "aa74754a-87c2-4911-b20f-c01c2f5d2b2a",
           "command": "⌘ + Space → type 'term' → Enter",
           "description": "💡 TIP: You only need to type 'term' - macOS will find Terminal",
           "copyable": false
         },
         {
+          "uuid": "160e4087-15d9-4c9f-ac51-66c61dd519ec",
           "command": "Finder → Applications → Utilities → Terminal",
           "description": "📁 Alternative: Click Finder, then Applications folder, then Utilities, double-click Terminal",
           "copyable": false
         },
         {
+          "uuid": "fac4a528-0c97-40ed-9b9e-380192e04cdb",
           "command": "Dock → Launchpad → Terminal",
           "description": "🎯 If Terminal is in your Dock or Launchpad, just click it",
           "copyable": false
@@ -30,64 +35,79 @@
       ]
     },
     {
+      "uuid": "0c55aee7-1df6-4804-a485-5d9b5baa1554",
       "title": "Basic Commands",
       "commands": [
         {
+          "uuid": "e93f9bd9-9e41-4c22-ae36-742922cf5ff0",
           "command": "git status",
           "description": "Check repository status and see what files have changed"
         },
         {
+          "uuid": "88689694-95b6-44cd-9d2c-91d2b1085203",
           "command": "git add .",
           "description": "Stage all changes for commit"
         },
         {
+          "uuid": "486e8983-fde2-4aa0-89b5-bc604229cb2b",
           "command": "git add filename.txt",
           "description": "Stage specific file for commit"
         },
         {
+          "uuid": "e8f7253a-cf0e-442f-bcd9-5c58af09cea6",
           "command": "git commit -m \"Your message here\"",
           "description": "Commit staged changes with a descriptive message"
         },
         {
+          "uuid": "3b59142d-3b8d-4c4a-99e8-e91241827e9e",
           "command": "git push",
           "description": "Push commits to remote repository"
         },
         {
+          "uuid": "88f9674a-0be0-462d-93c4-f49039ea0ef8",
           "command": "git pull",
           "description": "Pull latest changes from remote repository"
         },
         {
+          "uuid": "8bb76ed1-5f3e-49c2-bd1c-e70ae79c17aa",
           "command": "git log --oneline",
           "description": "View commit history in compact format"
         }
       ]
     },
     {
+      "uuid": "44924bc5-b138-4a8d-8dd8-c97be865f9eb",
       "title": "Branching & Merging",
       "commands": [
         {
+          "uuid": "1f42d46a-52cc-458b-8c74-b3ce5e1c872d",
           "command": "git branch",
           "description": "List all local branches (* shows current branch)"
         },
         {
+          "uuid": "4d35a206-d21d-42ae-baa3-fadc5e90dc0d",
           "command": "git branch -a",
           "description": "List all branches (local and remote)"
         },
         {
+          "uuid": "f9deacb9-c469-47a6-882f-76f847059f74",
           "command": "git checkout -b feature-name",
           "description": "Create and switch to new branch"
         },
         {
           "command": "git checkout main",
-          "description": "Switch to main branch"
+          "description": "Switch to main branch",
+          "uuid": "1fdb5e8c-6277-4c06-b246-aa16646f42b3"
         },
         {
           "command": "git merge feature-name",
-          "description": "Merge feature branch into current branch"
+          "description": "Merge feature branch into current branch",
+          "uuid": "1f57290d-1f45-4407-9493-2a1c4b9cdc7e"
         },
         {
           "command": "git branch -d feature-name",
-          "description": "Delete local branch (after merging)"
+          "description": "Delete local branch (after merging)",
+          "uuid": "81f527cd-6231-4e04-8887-d46f2c091c9a"
         }
       ]
     },
@@ -96,280 +116,347 @@
       "commands": [
         {
           "command": "git diff",
-          "description": "See what changes you've made (not yet staged)"
+          "description": "See what changes you've made (not yet staged)",
+          "uuid": "3489150e-c116-48f3-9e76-769851cce6b3"
         },
         {
           "command": "git diff --staged",
-          "description": "See staged changes (ready to commit)"
+          "description": "See staged changes (ready to commit)",
+          "uuid": "d97de950-6dd8-40bf-b5c7-b882898282b0"
         },
         {
           "command": "git checkout -- filename.txt",
-          "description": "Discard changes to specific file (revert to last commit)"
+          "description": "Discard changes to specific file (revert to last commit)",
+          "uuid": "6f2d2cfd-35d6-48fc-bd8b-489d93762604"
         },
         {
           "command": "git reset HEAD filename.txt",
-          "description": "Unstage specific file (keep changes)"
+          "description": "Unstage specific file (keep changes)",
+          "uuid": "28c58d95-3a75-4ff0-876d-fb289b226918"
         },
         {
           "command": "git reset --hard HEAD",
-          "description": "⚠️ Discard ALL changes (dangerous - cannot be undone)"
+          "description": "⚠️ Discard ALL changes (dangerous - cannot be undone)",
+          "uuid": "e3501565-9472-428c-8bf1-346bddbbcfb2"
         },
         {
           "command": "git revert HEAD",
-          "description": "Create new commit that undoes the last commit"
+          "description": "Create new commit that undoes the last commit",
+          "uuid": "ab464d1b-0e8a-4bec-9c1c-fead082dc588"
         }
-      ]
+      ],
+      "uuid": "35a7c107-1de3-4fb1-9d71-fae05c40bb62"
     },
     {
       "title": "Stashing (Temporary Storage)",
       "commands": [
         {
           "command": "git stash",
-          "description": "Temporarily save current changes without committing"
+          "description": "Temporarily save current changes without committing",
+          "uuid": "406326f4-c5ad-4e20-a8d0-c98905cf8ef5"
         },
         {
           "command": "git stash push -m \"Work in progress\"",
-          "description": "Stash changes with a descriptive message"
+          "description": "Stash changes with a descriptive message",
+          "uuid": "328891a3-104c-4720-858d-fc2b0d62127b"
         },
         {
           "command": "git stash list",
-          "description": "List all stashed changes"
+          "description": "List all stashed changes",
+          "uuid": "8ec08b3a-5dd1-4293-a2e8-4092b3f3e9f6"
         },
         {
           "command": "git stash pop",
-          "description": "Apply most recent stash and remove it from stash list"
+          "description": "Apply most recent stash and remove it from stash list",
+          "uuid": "a24333a6-5714-4076-b1ab-b23b2ded51b4"
         },
         {
           "command": "git stash apply",
-          "description": "Apply most recent stash but keep it in stash list"
+          "description": "Apply most recent stash but keep it in stash list",
+          "uuid": "f06b9c89-3eb1-4117-9e1a-a73e42fbb8d0"
         },
         {
           "command": "git stash drop",
-          "description": "Delete most recent stash without applying"
+          "description": "Delete most recent stash without applying",
+          "uuid": "e98c8f0f-8863-4b5d-b6f4-5fb3133a20ec"
         },
         {
           "command": "git stash clear",
-          "description": "⚠️ Delete all stashes (cannot be undone)"
+          "description": "⚠️ Delete all stashes (cannot be undone)",
+          "uuid": "e5c4e4bb-bb17-403f-a90f-35c705b9541d"
         }
-      ]
+      ],
+      "uuid": "76e3b95a-4531-4c68-aef5-6a2fa3c6ee28"
     },
     {
       "title": "Repository Setup",
       "commands": [
         {
           "command": "git init",
-          "description": "Initialize new Git repository in current directory"
+          "description": "Initialize new Git repository in current directory",
+          "uuid": "87e7d009-4b67-4b2a-9d93-28908e27b2df"
         },
         {
           "command": "git clone https://github.com/user/repo.git",
-          "description": "Clone remote repository to local machine"
+          "description": "Clone remote repository to local machine",
+          "uuid": "4efd1dbb-87dd-4eb5-a1fa-62a9c4ed09c2"
         },
         {
           "command": "git remote -v",
-          "description": "Show remote repository URLs"
+          "description": "Show remote repository URLs",
+          "uuid": "16e26c76-bae9-42b5-9656-acdcd6d98dd9"
         },
         {
           "command": "git remote add origin https://github.com/user/repo.git",
-          "description": "Add remote repository URL"
+          "description": "Add remote repository URL",
+          "uuid": "102c775c-7f51-412b-89eb-30aae127c0d5"
         }
-      ]
+      ],
+      "uuid": "a4a92a0c-02c6-4e56-bca9-fa766ce862ed"
     },
     {
       "title": "Git Configuration",
       "commands": [
         {
           "command": "git config --global user.name \"Your Name\"",
-          "description": "Set your name for all repositories"
+          "description": "Set your name for all repositories",
+          "uuid": "23d68553-5ad3-44c7-b87e-026c1eaa55cd"
         },
         {
           "command": "git config --global user.email \"your.email@example.com\"",
-          "description": "Set your email for all repositories"
+          "description": "Set your email for all repositories",
+          "uuid": "c6663b51-8af3-4700-b0c7-bf85552625e3"
         },
         {
           "command": "git config --global pull.rebase true",
-          "description": "Always rebase when pulling (cleaner history)"
+          "description": "Always rebase when pulling (cleaner history)",
+          "uuid": "1a388f13-620b-417e-b1a4-a538a1bceba6"
         },
         {
           "command": "git config --global init.defaultBranch main",
-          "description": "Use 'main' as default branch name for new repos"
+          "description": "Use 'main' as default branch name for new repos",
+          "uuid": "fe737e0c-670b-4a84-bce7-e96633d2282c"
         },
         {
           "command": "git config --global core.autocrlf input",
-          "description": "Handle line endings automatically (Mac/Linux)"
+          "description": "Handle line endings automatically (Mac/Linux)",
+          "uuid": "536dce37-bd45-42ed-8346-2e2d9756a671"
         },
         {
           "command": "git config --global core.editor \"code --wait\"",
-          "description": "Use VS Code as default Git editor"
+          "description": "Use VS Code as default Git editor",
+          "uuid": "5c6f4375-7454-471e-a3dd-8e8c8fa801b2"
         },
         {
           "command": "git config --global alias.st status",
-          "description": "Create shortcut: 'git st' for 'git status'"
+          "description": "Create shortcut: 'git st' for 'git status'",
+          "uuid": "c871cdd4-0ff8-49b0-b1b8-3032db707143"
         },
         {
           "command": "git config --global alias.co checkout",
-          "description": "Create shortcut: 'git co' for 'git checkout'"
+          "description": "Create shortcut: 'git co' for 'git checkout'",
+          "uuid": "7a405725-e57c-4e38-86dd-cbe92b0afc2e"
         },
         {
           "command": "git config --global alias.br branch",
-          "description": "Create shortcut: 'git br' for 'git branch'"
+          "description": "Create shortcut: 'git br' for 'git branch'",
+          "uuid": "d32fcbcf-5385-431a-8278-5714f40e5b2c"
         },
         {
           "command": "git config --global alias.unstage 'reset HEAD --'",
-          "description": "Create shortcut: 'git unstage' to unstage files"
+          "description": "Create shortcut: 'git unstage' to unstage files",
+          "uuid": "1429a6ef-789c-4e99-b8cd-9c5fdc008a5f"
         },
         {
           "command": "git config --global alias.last 'log -1 HEAD'",
-          "description": "Create shortcut: 'git last' to see last commit"
+          "description": "Create shortcut: 'git last' to see last commit",
+          "uuid": "2df90cc7-97b8-4584-b92d-8f4f8d6d0f88"
         },
         {
           "command": "git config --global alias.lg 'log --oneline --graph --decorate --all'",
-          "description": "Create shortcut: 'git lg' for beautiful log with graph"
+          "description": "Create shortcut: 'git lg' for beautiful log with graph",
+          "uuid": "2a87c298-a26d-45f8-8e9b-77861c10c46b"
         },
         {
           "command": "git config --global alias.s 'status -s'",
-          "description": "Create shortcut: 'git s' for short status"
+          "description": "Create shortcut: 'git s' for short status",
+          "uuid": "ea63781a-2e7a-447a-b66b-ed8cf813cf90"
         },
         {
           "command": "git config --global alias.cm 'commit -m'",
-          "description": "Create shortcut: 'git cm \"message\"' for quick commits"
+          "description": "Create shortcut: 'git cm \"message\"' for quick commits",
+          "uuid": "ed1e9f75-e60d-49c7-be36-928c88148b6b"
         },
         {
           "command": "git config --global alias.amend 'commit --amend --no-edit'",
-          "description": "Create shortcut: 'git amend' to add changes to last commit"
+          "description": "Create shortcut: 'git amend' to add changes to last commit",
+          "uuid": "040d5b50-42cf-4201-954a-8634155f2d26"
         },
         {
           "command": "git config --global alias.undo 'reset --soft HEAD~1'",
-          "description": "Create shortcut: 'git undo' to undo last commit (keep changes)"
+          "description": "Create shortcut: 'git undo' to undo last commit (keep changes)",
+          "uuid": "b6fe7084-6159-4e2f-8587-d83c1db8ec74"
         },
         {
           "command": "git config --global alias.wip 'commit -am \"WIP\"'",
-          "description": "Create shortcut: 'git wip' for work-in-progress commits"
+          "description": "Create shortcut: 'git wip' for work-in-progress commits",
+          "uuid": "5a896ed9-f0eb-4d3b-a437-0e1063a68c8a"
         },
         {
           "command": "git config --global alias.aliases 'config --get-regexp alias'",
-          "description": "Create shortcut: 'git aliases' to list all your aliases"
+          "description": "Create shortcut: 'git aliases' to list all your aliases",
+          "uuid": "b8d6e370-b003-4d06-b75d-c68525e3fe54"
         },
         {
           "command": "git config --global push.default simple",
-          "description": "Only push current branch to matching branch"
+          "description": "Only push current branch to matching branch",
+          "uuid": "1f1ebaa8-528e-44df-a7fc-3adea8056cd9"
         },
         {
           "command": "git config --list",
-          "description": "View all current Git configuration settings"
+          "description": "View all current Git configuration settings",
+          "uuid": "1d786505-a3fa-432e-bfa4-251155f1f87a"
         }
-      ]
+      ],
+      "uuid": "feddf3f5-a20b-4173-9916-5d88c4399dd4"
     },
     {
       "title": "Useful Shortcuts & Tips",
       "commands": [
         {
           "command": "git commit -am \"Message\"",
-          "description": "Stage and commit all modified files in one command"
+          "description": "Stage and commit all modified files in one command",
+          "uuid": "70f14721-c414-4db5-a558-f5bae35adb71"
         },
         {
           "command": "git log --graph --oneline --all",
-          "description": "Visual branch history with graph"
+          "description": "Visual branch history with graph",
+          "uuid": "a02f210b-720c-4713-93a7-9fbc5065e9f5"
         },
         {
           "command": "git show HEAD",
-          "description": "Show details of the last commit"
+          "description": "Show details of the last commit",
+          "uuid": "f159f631-243e-4b69-95bd-f95e1140dd77"
         },
         {
           "command": "git blame filename.txt",
-          "description": "See who changed each line in a file"
+          "description": "See who changed each line in a file",
+          "uuid": "42ab7c98-eb84-41df-828e-120873df0895"
         },
         {
           "command": "git clean -fd",
-          "description": "Remove untracked files and directories"
+          "description": "Remove untracked files and directories",
+          "uuid": "e7eed626-91b8-4549-a263-777bb1437fec"
         }
-      ]
+      ],
+      "uuid": "7d52f7e7-346f-462c-874a-cffda1744a53"
     },
     {
       "title": "GitHub SSH Setup",
       "commands": [
         {
           "command": "ssh-keygen -t ed25519 -C \"your.email@example.com\"",
-          "description": "Generate new SSH key (replace with your GitHub email)"
+          "description": "Generate new SSH key (replace with your GitHub email)",
+          "uuid": "bb6009bb-25f7-4626-b21c-063602bd9ad5"
         },
         {
           "command": "Press Enter",
           "description": "Accept default file location (~/.ssh/id_ed25519)",
-          "copyable": false
+          "copyable": false,
+          "uuid": "ce76f2c9-3bdd-4f2d-9f76-557050821ee6"
         },
         {
           "command": "Enter passphrase (optional)",
           "description": "💡 TIP: Press Enter twice for no passphrase, or create a secure passphrase",
-          "copyable": false
+          "copyable": false,
+          "uuid": "7d20d88a-e6fd-4713-b7a8-cd46a0ff1519"
         },
         {
           "command": "eval \"$(ssh-agent -s)\"",
-          "description": "Start SSH agent in background"
+          "description": "Start SSH agent in background",
+          "uuid": "27fedb44-1f6b-4279-8175-b664a82eb524"
         },
         {
           "command": "ssh-add ~/.ssh/id_ed25519",
-          "description": "Add SSH private key to ssh-agent"
+          "description": "Add SSH private key to ssh-agent",
+          "uuid": "97686a9a-2d7e-4fde-8511-7d8ca8143035"
         },
         {
           "command": "pbcopy < ~/.ssh/id_ed25519.pub",
-          "description": "📋 Copy public key to clipboard (macOS)"
+          "description": "📋 Copy public key to clipboard (macOS)",
+          "uuid": "a53559a5-a659-490c-a275-642e7d7f7429"
         },
         {
           "command": "cat ~/.ssh/id_ed25519.pub",
-          "description": "📄 Display public key (copy manually if pbcopy doesn't work)"
+          "description": "📄 Display public key (copy manually if pbcopy doesn't work)",
+          "uuid": "a6783971-d933-4800-b500-c4959eed30fb"
         },
         {
           "command": "Go to GitHub.com → Settings → SSH and GPG keys",
           "description": "🌐 Open GitHub in browser and navigate to SSH settings",
-          "copyable": false
+          "copyable": false,
+          "uuid": "3109fa42-59cf-45e7-bacf-71e253a0a994"
         },
         {
           "command": "Click 'New SSH key' → Paste key → Add SSH key",
           "description": "➕ Add your public key to GitHub account",
-          "copyable": false
+          "copyable": false,
+          "uuid": "b42a53b0-92df-4bd4-9629-ba243bbaf32c"
         },
         {
           "command": "ssh -T git@github.com",
-          "description": "🧪 Test SSH connection to GitHub"
+          "description": "🧪 Test SSH connection to GitHub",
+          "uuid": "3e320d7b-938e-4138-a7c9-4d3edfac8937"
         },
         {
           "command": "Type 'yes' when prompted",
           "description": "✅ Confirm GitHub's fingerprint (first time only)",
-          "copyable": false
+          "copyable": false,
+          "uuid": "70ae7c84-0712-45a3-9f19-09d981777fca"
         }
-      ]
+      ],
+      "uuid": "a1ecc629-e9d8-4da4-a408-5443cba16ec5"
     },
     {
       "title": "Useful Links & Resources",
       "commands": [
         {
           "command": "https://git-scm.com/docs",
-          "description": "📖 Official Git Documentation - Complete reference"
+          "description": "📖 Official Git Documentation - Complete reference",
+          "uuid": "dcfe5b4e-d16e-43af-8f9a-ccc4b0e1dfe1"
         },
         {
           "command": "https://learngitbranching.js.org/",
-          "description": "🎮 Interactive Git Tutorial - Learn branching visually"
+          "description": "🎮 Interactive Git Tutorial - Learn branching visually",
+          "uuid": "8795abad-abcb-4935-80bf-d027a8d7b44d"
         },
         {
           "command": "https://ohshitgit.com/",
-          "description": "🆘 Oh Shit, Git! - Fix common Git mistakes"
+          "description": "🆘 Oh Shit, Git! - Fix common Git mistakes",
+          "uuid": "7f8b6d4c-e77f-4e2e-bfb8-1feb0448abc7"
         },
         {
           "command": "https://gitexplorer.com/",
-          "description": "🔍 Git Explorer - Find the right Git command"
+          "description": "🔍 Git Explorer - Find the right Git command",
+          "uuid": "7cba26f5-1bb9-43b8-860b-f0999b7d505b"
         },
         {
           "command": "https://github.com/git-tips/tips",
-          "description": "💡 Git Tips - Collection of useful Git tricks"
+          "description": "💡 Git Tips - Collection of useful Git tricks",
+          "uuid": "14d7edbb-d05b-444f-a9f4-f715d8c56f1f"
         },
         {
           "command": "https://www.atlassian.com/git/tutorials",
-          "description": "📚 Atlassian Git Tutorials - Comprehensive guides"
+          "description": "📚 Atlassian Git Tutorials - Comprehensive guides",
+          "uuid": "d0715fcd-9a59-4832-87d2-3667b42a94d7"
         },
         {
           "command": "https://gitignore.io/",
-          "description": "🚫 .gitignore Generator - Create .gitignore files"
+          "description": "🚫 .gitignore Generator - Create .gitignore files",
+          "uuid": "38413a4b-0ebb-42bb-bdac-d320cf3a935a"
         }
-      ]
+      ],
+      "uuid": "db846166-e737-4a9f-bfd2-64245f3d2451"
     }
   ]
 }

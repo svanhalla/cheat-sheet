@@ -5,24 +5,29 @@
   "icon": "⚛️",
   "categories": [
     {
+      "uuid": "22093626-ed9c-49b4-a9d7-2f27eb2e5531",
       "title": "Opening Terminal",
       "commands": [
         {
+          "uuid": "f73ed1f9-f3b7-47d4-8850-80617d35162e",
           "command": "⌘ + Space → type 'terminal' → Enter",
           "description": "🚀 FASTEST: Press Command + Space keys together, type 'terminal', press Enter",
           "copyable": false
         },
         {
+          "uuid": "835f824d-792d-4138-af0a-c8ca44bf2c7d",
           "command": "⌘ + Space → type 'term' → Enter",
           "description": "💡 TIP: You only need to type 'term' - macOS will find Terminal",
           "copyable": false
         },
         {
+          "uuid": "1bdce708-24f7-4cff-b6d8-7fcbb3821e3d",
           "command": "Finder → Applications → Utilities → Terminal",
           "description": "📁 Alternative: Click Finder, then Applications folder, then Utilities, double-click Terminal",
           "copyable": false
         },
         {
+          "uuid": "9952221b-d16e-4531-b319-4c19ed3229d5",
           "command": "Dock → Launchpad → Terminal",
           "description": "🎯 If Terminal is in your Dock or Launchpad, just click it",
           "copyable": false
@@ -30,17 +35,21 @@
       ]
     },
     {
+      "uuid": "d7d029e8-de5a-43e0-b767-73db0c494371",
       "title": "CLI Commands",
       "commands": [
         {
+          "uuid": "28c361a6-4274-4fe8-af13-74662f6bd2e4",
           "command": "npx create-next-app@latest",
           "description": "Create new Next.js app"
         },
         {
+          "uuid": "38963250-1bd4-4057-aec6-db57e8eebe2a",
           "command": "npm run dev",
           "description": "Start development server"
         },
         {
+          "uuid": "80a26746-a5c2-4049-8081-37234853db3a",
           "command": "npm run build",
           "description": "Build for production"
         }

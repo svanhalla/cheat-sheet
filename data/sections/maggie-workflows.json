@@ -11,25 +11,31 @@
         {
           "command": "⌘ + Space → type 'terminal' → Enter",
           "description": "🚀 FASTEST: Press Command + Space keys together, type 'terminal', press Enter to open Terminal",
-          "copyable": false
+          "copyable": false,
+          "uuid": "856b1954-e9ab-4a11-9f1d-bc872614eb9a"
         },
         {
           "command": "cd ~/Documents",
-          "description": "Navigate to your Documents folder where the project will be stored"
+          "description": "Navigate to your Documents folder where the project will be stored",
+          "uuid": "c23dd4a9-06d1-492a-9fb7-08986669b7de"
         },
         {
           "command": "git clone git@github.com:svanhalla/maggie.git",
-          "description": "Download the website code to your computer using SSH"
+          "description": "Download the website code to your computer using SSH",
+          "uuid": "39bfe2b9-a0df-4868-b5d3-568dec540ccf"
         },
         {
           "command": "cd maggie",
-          "description": "Enter the project folder that was just created"
+          "description": "Enter the project folder that was just created",
+          "uuid": "ac94b13f-0adc-4e58-b090-3d8f6f08a0c6"
         },
         {
           "command": "npm install",
-          "description": "Install all required dependencies (this may take a few minutes)"
+          "description": "Install all required dependencies (this may take a few minutes)",
+          "uuid": "a5fbc28e-9d05-413c-a4cb-3f188f5664da"
         }
-      ]
+      ],
+      "uuid": "143dc78f-0723-4527-bdb9-5e11a4513071"
     },
     {
       "title": "2. Making Content Changes",
@@ -37,27 +43,33 @@
       "commands": [
         {
           "command": "cd ~/Documents/repos/maggie",
-          "description": "Navigate to the maggie project folder"
+          "description": "Navigate to the maggie project folder",
+          "uuid": "03d844c9-b6a1-4257-9211-c729da1a2a59"
         },
         {
           "command": "open data/about.json",
-          "description": "📝 Biography, contact info, publications, and media links"
+          "description": "📝 Biography, contact info, publications, and media links",
+          "uuid": "1ddcc12c-d4c4-4ebb-ad98-40b66a177bda"
         },
         {
           "command": "open data/home.json",
-          "description": "🏠 Homepage content, featured sections, and layout settings"
+          "description": "🏠 Homepage content, featured sections, and layout settings",
+          "uuid": "107f2ae8-b59a-4a3b-a754-52eb5a4fef5b"
         },
         {
           "command": "open data/workshops.json",
-          "description": "🎓 Workshop schedules, descriptions, and pricing"
+          "description": "🎓 Workshop schedules, descriptions, and pricing",
+          "uuid": "4e0fea50-c105-43b5-b5b2-1fdc764ef379"
         },
         {
           "command": "open data/books.json",
-          "description": "📚 Published books, covers, and gallery images"
+          "description": "📚 Published books, covers, and gallery images",
+          "uuid": "e5da4222-ab55-43d0-8e06-134286a100ce"
         },
         {
           "command": "open data/galleries.json",
-          "description": "🏛️ Representing art galleries contact information"
+          "description": "🏛️ Representing art galleries contact information",
+          "uuid": "170e82ad-1cab-4584-832d-3fa9337ff002"
         }
       ],
       "subsections": [
@@ -66,44 +78,55 @@
           "commands": [
             {
               "command": "open data/works.json",
-              "description": "🖼️ Main gallery page - controls thumbnails and links. Each 'id' field connects to works-[id].json files"
+              "description": "🖼️ Main gallery page - controls thumbnails and links. Each 'id' field connects to works-[id].json files",
+              "uuid": "01c58977-2101-4915-86ea-58ce5cec6451"
             },
             {
               "command": "Example: \"id\": \"2022-2025\"",
               "description": "💡 This ID in works.json links to → works-2022-2025.json file",
-              "copyable": false
+              "copyable": false,
+              "uuid": "538597a5-ec14-4208-9e54-72c73e2ac1bc"
             },
             {
               "command": "open data/works-2022-2025.json",
-              "description": "Recent artwork collection (2022-2025) - newest pieces"
+              "description": "Recent artwork collection (2022-2025) - newest pieces",
+              "uuid": "b5d494f3-bcba-4a04-99fe-e3bdea93492f"
             },
             {
               "command": "open data/works-2014-2021.json",
-              "description": "Digital explorations period (2014-2021)"
+              "description": "Digital explorations period (2014-2021)",
+              "uuid": "c83b92ce-f39d-497c-950d-7cb564b69565"
             },
             {
               "command": "open data/works-2010-2013.json",
-              "description": "Surreal narratives period (2010-2013)"
+              "description": "Surreal narratives period (2010-2013)",
+              "uuid": "8e7bc3e4-3534-4fe8-abfb-bff4b77e5bcc"
             },
             {
               "command": "open data/works-2005-2009.json",
-              "description": "Digital dreams period (2005-2009)"
+              "description": "Digital dreams period (2005-2009)",
+              "uuid": "3d5058c8-7f66-41e5-8318-db5b34e6b723"
             },
             {
               "command": "open data/works-1999-2004.json",
-              "description": "Early digital works period (1999-2004)"
+              "description": "Early digital works period (1999-2004)",
+              "uuid": "90a2aafd-14c4-4c0e-a30b-f17f630b832e"
             },
             {
               "command": "open data/works-alice.json",
-              "description": "🐰 Alice's Adventures in Wonderland themed collection"
+              "description": "🐰 Alice's Adventures in Wonderland themed collection",
+              "uuid": "9ca11639-4189-46cb-ae62-7674a7f78c4f"
             },
             {
               "command": "open data/works-ttlg.json",
-              "description": "🪞 Through the Looking Glass themed collection"
+              "description": "🪞 Through the Looking Glass themed collection",
+              "uuid": "25e82f5e-9090-4c86-af18-ee503a658e15"
             }
-          ]
+          ],
+          "uuid": "d4def24c-d792-4992-8dc5-f6b5b8f6a90e"
         }
-      ]
+      ],
+      "uuid": "c79f4fc7-1ad5-4ab2-a2fd-20ee0ad31d65"
     },
     {
       "title": "2b. JSON Editing Rules (IMPORTANT!)",
@@ -111,29 +134,36 @@
       "commands": [
         {
           "command": "\"text\": \"value\",",
-          "description": "✅ CORRECT: Use double quotes, comma after each item"
+          "description": "✅ CORRECT: Use double quotes, comma after each item",
+          "uuid": "56671177-f910-4846-ade9-c8672f0aca8b"
         },
         {
           "command": "\"text\": \"value\"",
-          "description": "✅ CORRECT: NO comma on the LAST item in a list"
+          "description": "✅ CORRECT: NO comma on the LAST item in a list",
+          "uuid": "45faaa7d-d23c-4796-9e0b-de884a762a57"
         },
         {
           "command": "'text': 'value',",
-          "description": "❌ WRONG: Never use single quotes in JSON"
+          "description": "❌ WRONG: Never use single quotes in JSON",
+          "uuid": "7496188d-3028-4bca-bf79-37a4e2a4a0fb"
         },
         {
           "command": "\"visible\": true",
-          "description": "✅ CORRECT: true/false (no quotes for booleans)"
+          "description": "✅ CORRECT: true/false (no quotes for booleans)",
+          "uuid": "5c2d06a8-22ec-4d68-994c-e721144d7b6e"
         },
         {
           "command": "\"visible\": \"true\"",
-          "description": "❌ WRONG: Don't put quotes around true/false"
+          "description": "❌ WRONG: Don't put quotes around true/false",
+          "uuid": "0e5d9792-ba28-424f-8f94-ec5d8b092800"
         },
         {
           "command": "Check JSON syntax",
-          "description": "💡 TIP: Dreamweaver shows red errors if JSON syntax is wrong"
+          "description": "💡 TIP: Dreamweaver shows red errors if JSON syntax is wrong",
+          "uuid": "b1f75995-bd6e-43b2-b692-088a6008ac86"
         }
-      ]
+      ],
+      "uuid": "7d631b48-61cf-4994-bcdf-5cf7da37e296"
     },
     {
       "title": "2c. JSON File Format Guide",
@@ -142,34 +172,42 @@
         {
           "command": "Basic JSON Structure",
           "description": "JSON files contain data in key-value pairs enclosed in curly braces { }",
-          "copyable": false
+          "copyable": false,
+          "uuid": "5cd14fdc-4cb7-4cb2-9f8e-5d4a3f778072"
         },
         {
           "command": "\"title\": \"Page Title\"",
-          "description": "Text values must be in double quotes"
+          "description": "Text values must be in double quotes",
+          "uuid": "d7b13920-2ece-4d3d-a5e2-4ba1dea86838"
         },
         {
           "command": "\"visible\": true",
-          "description": "Boolean values (true/false) have no quotes"
+          "description": "Boolean values (true/false) have no quotes",
+          "uuid": "a17c322f-7634-4218-90a3-d4c92cea5f61"
         },
         {
           "command": "\"year\": \"2025\"",
-          "description": "Numbers can be in quotes for consistency"
+          "description": "Numbers can be in quotes for consistency",
+          "uuid": "e853bd71-139d-49a1-8df5-964f47d1414f"
         },
         {
           "command": "[\"item1\", \"item2\", \"item3\"]",
-          "description": "Arrays (lists) use square brackets [ ]"
+          "description": "Arrays (lists) use square brackets [ ]",
+          "uuid": "22f01571-248d-41a5-9243-7baff4fdda7f"
         },
         {
           "command": "Comma Rules",
           "description": "Put commas after each item, EXCEPT the last item in a list",
-          "copyable": false
+          "copyable": false,
+          "uuid": "7d406bf7-8730-4e9d-b15b-66e02baa4d83"
         },
         {
           "command": "\"images\": [\n  {\n    \"path\": \"/image1.jpg\",\n    \"title\": \"First\"\n  },\n  {\n    \"path\": \"/image2.jpg\",\n    \"title\": \"Second\"\n  }\n]",
-          "description": "Objects in arrays - note NO comma after the last object"
+          "description": "Objects in arrays - note NO comma after the last object",
+          "uuid": "c85295c7-d548-4a66-8284-a00714a3f58d"
         }
-      ]
+      ],
+      "uuid": "f33bd22c-276c-40a0-a88b-98d6d1c4b0ec"
     },
     {
       "title": "3. Preview Changes Locally",
@@ -177,17 +215,21 @@
       "commands": [
         {
           "command": "cd ~/Documents/maggie",
-          "description": "Navigate to the maggie project folder"
+          "description": "Navigate to the maggie project folder",
+          "uuid": "e9bae5ce-55b7-40e2-a56d-bcb2ac86b4a1"
         },
         {
           "command": "npm run dev",
-          "description": "Start local development server"
+          "description": "Start local development server",
+          "uuid": "caa57397-69ff-4604-af1b-84c366a53eb0"
         },
         {
           "command": "open http://localhost:3000",
-          "description": "View your changes in the browser (Ctrl+C to stop server)"
+          "description": "View your changes in the browser (Ctrl+C to stop server)",
+          "uuid": "7d47fe42-bf60-4421-8333-5da68deec937"
         }
-      ]
+      ],
+      "uuid": "70df880a-7cd8-4f6e-85cc-bb35ec3ce04d"
     },
     {
       "title": "4. Quick Reference - Common Tasks",
@@ -195,41 +237,51 @@
       "commands": [
         {
           "command": "git status",
-          "description": "Check what files you've changed"
+          "description": "Check what files you've changed",
+          "uuid": "0b290c97-c4ae-48f7-85dd-d7dc72314fe6"
         },
         {
           "command": "git pull",
-          "description": "Get latest changes before starting work"
+          "description": "Get latest changes before starting work",
+          "uuid": "03418cb3-c329-4d95-b54b-f3ef8df24bda"
         },
         {
           "command": "git log --oneline -5",
-          "description": "See recent changes to the website"
+          "description": "See recent changes to the website",
+          "uuid": "55e911c4-8e6c-4c53-8cc8-bdec6055fd9f"
         },
         {
           "command": "git stash",
-          "description": "Temporarily save your changes without committing (useful before git pull)"
+          "description": "Temporarily save your changes without committing (useful before git pull)",
+          "uuid": "62b842fb-e98f-4c65-91f1-a009c18f6e79"
         },
         {
           "command": "git stash pop",
-          "description": "Restore your temporarily saved changes"
+          "description": "Restore your temporarily saved changes",
+          "uuid": "13e5f0b4-f06c-4caa-aa93-6ab0461da56b"
         },
         {
           "command": "git stash clear",
-          "description": "Delete all temporarily saved changes (use carefully!)"
+          "description": "Delete all temporarily saved changes (use carefully!)",
+          "uuid": "a855f734-4cdf-4647-bf10-a280d2494c4c"
         },
         {
           "command": "git diff",
-          "description": "See exactly what you've changed in files"
+          "description": "See exactly what you've changed in files",
+          "uuid": "c98bb7df-0bd1-4b3d-bfcb-ce59e15d2287"
         },
         {
           "command": "git checkout -- filename.json",
-          "description": "Undo changes to a specific file (revert to last saved version)"
+          "description": "Undo changes to a specific file (revert to last saved version)",
+          "uuid": "584158d5-222a-4b52-9db5-72004d2ed1ab"
         },
         {
           "command": "git revert HEAD",
-          "description": "Undo the last commit (creates a new commit that undoes changes)"
+          "description": "Undo the last commit (creates a new commit that undoes changes)",
+          "uuid": "f6c2a4ca-545d-4542-a8b7-ef2427f8e4ea"
         }
-      ]
+      ],
+      "uuid": "a886fda0-fe42-46b6-84e2-a6d1135edcbe"
     },
     {
       "title": "🔧 Troubleshooting Common Issues",
@@ -237,33 +289,41 @@
       "commands": [
         {
           "command": "npm install",
-          "description": "🚨 FIRST: If you get 'next: command not found' - install dependencies"
+          "description": "🚨 FIRST: If you get 'next: command not found' - install dependencies",
+          "uuid": "4633521e-9266-47c0-bbd1-9465906dd991"
         },
         {
           "command": "node --version",
-          "description": "Check if Node.js is installed (should show version like v18.x.x)"
+          "description": "Check if Node.js is installed (should show version like v18.x.x)",
+          "uuid": "209a6c89-52d9-4507-9994-905ff3dea6ba"
         },
         {
           "command": "npm --version",
-          "description": "Check if npm is installed (should show version like 9.x.x)"
+          "description": "Check if npm is installed (should show version like 9.x.x)",
+          "uuid": "100f7be4-5934-4a54-b676-fa98acf8f871"
         },
         {
           "command": "brew install node",
-          "description": "Install Node.js if missing (includes npm)"
+          "description": "Install Node.js if missing (includes npm)",
+          "uuid": "2f441d49-01d1-4779-9971-49fe42682156"
         },
         {
           "command": "rm -rf node_modules package-lock.json",
-          "description": "🗑️ Delete corrupted dependencies (then run npm install)"
+          "description": "🗑️ Delete corrupted dependencies (then run npm install)",
+          "uuid": "499a86dc-81bb-47e3-b35b-eaa386fe0094"
         },
         {
           "command": "npm run dev -- --port 3001",
-          "description": "🔄 Use different port if 3000 is busy"
+          "description": "🔄 Use different port if 3000 is busy",
+          "uuid": "784d956c-356a-41b0-9f3c-3bfe87802793"
         },
         {
           "command": "lsof -ti:3000 | xargs kill -9",
-          "description": "💀 Kill process using port 3000 (if server won't start)"
+          "description": "💀 Kill process using port 3000 (if server won't start)",
+          "uuid": "14695f16-2f31-4bc5-99b7-c754d4ae40d2"
         }
-      ]
+      ],
+      "uuid": "f5843d22-2cc9-4cfe-9149-961eb2690c48"
     },
     {
       "title": "5. 🚀 PUBLISH Changes to Live Website",
@@ -272,21 +332,26 @@
       "commands": [
         {
           "command": "cd ~/Documents/maggie",
-          "description": "Navigate to the maggie project folder"
+          "description": "Navigate to the maggie project folder",
+          "uuid": "54e04e75-2990-4c66-aea1-069003ec1446"
         },
         {
           "command": "git add -A",
-          "description": "Stage all your changes for commit"
+          "description": "Stage all your changes for commit",
+          "uuid": "9847cdc7-1545-4aec-b176-264a6d8653cb"
         },
         {
           "command": "git commit -m \"Describe what you changed\"",
-          "description": "Save changes with YOUR description (e.g. \"Added new artwork\" or \"Updated workshop dates\")"
+          "description": "Save changes with YOUR description (e.g. \"Added new artwork\" or \"Updated workshop dates\")",
+          "uuid": "10483f21-cdd6-4d15-862f-3b61f0d460b1"
         },
         {
           "command": "git push",
-          "description": "🚀 Upload changes to GitHub (website updates automatically in 2-3 minutes)"
+          "description": "🚀 Upload changes to GitHub (website updates automatically in 2-3 minutes)",
+          "uuid": "b6628d7f-b40b-4ce6-a295-a4673a5fa411"
         }
-      ]
+      ],
+      "uuid": "531e9762-b1cc-4e8c-8f21-35e4ac878253"
     }
   ]
 }

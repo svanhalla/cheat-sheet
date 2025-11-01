@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { loadAllSections } from '../utils/loadSections'
+import SearchWrapper from '../components/SearchWrapper'
 
 export default function Home() {
   const sections = loadAllSections()
@@ -10,6 +11,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
             <h1 className="text-3xl font-bold text-primary">Developer Cheat Sheet</h1>
+            <SearchWrapper />
             <p className="text-gray-600">Quick reference for development commands</p>
           </div>
         </div>
@@ -31,9 +33,6 @@ export default function Home() {
                 </h3>
               </div>
               <p className="text-gray-600">Interactive tool to test colors (RGB), fonts, and sizes with live preview</p>
-              <div className="mt-4 text-sm text-primary font-medium">
-                Try it out →
-              </div>
             </Link>
           </div>
         </div>
@@ -55,9 +54,6 @@ export default function Home() {
                   </h2>
                 </div>
                 <p className="text-gray-600">{section.description}</p>
-                <div className="mt-4 text-sm text-primary font-medium">
-                  View commands →
-                </div>
               </Link>
             ))}
           </div>

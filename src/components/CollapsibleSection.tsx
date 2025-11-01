@@ -1,9 +1,11 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import CodeBlock from './CodeBlock'
+import { useHashHighlight, useHashExpand } from '../hooks/useHashHighlight'
 
 interface Command {
+  uuid?: string
   command: string
   description: string
   type?: 'terminal' | 'instruction' | 'code'
@@ -14,17 +16,73 @@ interface CollapsibleSectionProps {
   title: string
   commands: Command[]
   defaultExpanded?: boolean
+  sectionId?: string
+  categoryId?: string
 }
 
 export default function CollapsibleSection({ 
   title, 
   commands, 
-  defaultExpanded = false 
+  defaultExpanded = false,
+  sectionId,
+  categoryId
 }: CollapsibleSectionProps) {
-  const [isExpanded, setIsExpanded] = useState(defaultExpanded)
+  // Create URL-friendly ID from title
+  const sectionIdFromTitle = title.toLowerCase().replace(/[^a-z0-9\s]/g, '').replace(/\s+/g, '-')
+  
+  // Only highlight if hash matches exactly this section (not commands)
+  const [isHighlighted, setIsHighlighted] = useState(false)
+  
+  useEffect(() => {
+    const checkHash = () => {
+      const hash = window.location.hash.slice(1)
+      // Check if hash matches this category's UUID or the title-based ID
+      if (hash === categoryId || (hash === sectionIdFromTitle && !hash.includes('-'))) {
+        setIsHighlighted(true)
+        setTimeout(() => setIsHighlighted(false), 4000)
+      }
+    }
+    
+    checkHash()
+    window.addEventListener('hashchange', checkHash)
+    return () => window.removeEventListener('hashchange', checkHash)
+  }, [sectionIdFromTitle, categoryId])
+  
+  const shouldExpand = useHashExpand(sectionIdFromTitle, sectionId ? `${sectionId}` : undefined, categoryId)
+  const [isExpanded, setIsExpanded] = useState(defaultExpanded || shouldExpand)
+
+  // Check if a UUID hash belongs to this section's commands or is this category
+  useEffect(() => {
+    const checkUUIDExpansion = () => {
+      const hash = window.location.hash.slice(1)
+      
+      // Check if hash is a UUID
+      if (hash.match(/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/)) {
+        // Check if it's this category's UUID or belongs to our commands
+        const isThisCategory = categoryId === hash
+        const commandExists = commands.some(cmd => cmd.uuid === hash)
+        if (isThisCategory || commandExists) {
+          setIsExpanded(true)
+        }
+      }
+    }
+    
+    checkUUIDExpansion()
+    window.addEventListener('hashchange', checkUUIDExpansion)
+    return () => window.removeEventListener('hashchange', checkUUIDExpansion)
+  }, [commands, categoryId])
+
+  // Update expansion when shouldExpand changes
+  useEffect(() => {
+    if (shouldExpand) setIsExpanded(true)
+  }, [shouldExpand])
 
   return (
-    <div className="bg-white rounded-lg shadow-sm border border-gray-200 mb-6">
+    <div id={categoryId} className={`rounded-lg shadow-sm border mb-6 transition-all duration-700 ${
+      isHighlighted 
+        ? 'border-blue-500 shadow-xl bg-gradient-to-r from-blue-50 to-blue-100 scale-[1.02]' 
+        : 'bg-white border-gray-200'
+    }`}>
       <button
         onClick={() => setIsExpanded(!isExpanded)}
         className="w-full p-6 text-left hover:bg-gray-50 transition-colors"
@@ -73,6 +131,7 @@ export default function CollapsibleSection({
                   description={cmd.description}
                   type={cmd.type || 'code'}
                   copyable={cmd.copyable !== false}
+                  commandId={cmd.uuid}
                 />
               )
             })}

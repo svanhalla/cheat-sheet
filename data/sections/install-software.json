@@ -5,24 +5,29 @@
   "icon": "💾",
   "categories": [
     {
+      "uuid": "7fb372a1-6bde-4035-a322-ee286818ad1f",
       "title": "Opening Terminal",
       "commands": [
         {
+          "uuid": "292258af-0b17-407c-83d4-2f1ba5286bad",
           "command": "⌘ + Space → type 'terminal' → Enter",
           "description": "🚀 FASTEST: Press Command + Space keys together, type 'terminal', press Enter",
           "copyable": false
         },
         {
+          "uuid": "15e81591-ceab-4d2c-bb1e-4bb4e124299e",
           "command": "⌘ + Space → type 'term' → Enter",
           "description": "💡 TIP: You only need to type 'term' - macOS will find Terminal",
           "copyable": false
         },
         {
+          "uuid": "f0ad7d2e-b119-4f49-8128-0187176b88fa",
           "command": "Finder → Applications → Utilities → Terminal",
           "description": "📁 Alternative: Click Finder, then Applications folder, then Utilities, double-click Terminal",
           "copyable": false
         },
         {
+          "uuid": "ac488024-b542-4ac6-ae4f-c18e4372a769",
           "command": "Dock → Launchpad → Terminal",
           "description": "🎯 If Terminal is in your Dock or Launchpad, just click it",
           "copyable": false
@@ -34,73 +39,91 @@
       "commands": [
         {
           "command": "/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"",
-          "description": "This should be installed in terminal.Install Homebrew package manager for macOS"
+          "description": "This should be installed in terminal.Install Homebrew package manager for macOS",
+          "uuid": "aab47e0d-37dd-45bd-b762-4c1af04affff"
         },
         {
           "command": "brew --version",
-          "description": "Check if Homebrew is installed and show version"
+          "description": "Check if Homebrew is installed and show version",
+          "uuid": "da9a70dc-bdb8-4101-9548-9ee48a504763"
         },
         {
           "command": "brew update",
-          "description": "Update Homebrew to latest version"
+          "description": "Update Homebrew to latest version",
+          "uuid": "c0549f99-c21e-432a-ba27-8c1ceea64c81"
         },
         {
           "command": "brew upgrade",
-          "description": "Upgrade all installed packages"
+          "description": "Upgrade all installed packages",
+          "uuid": "d13ac62d-e8a6-4ede-8ef8-bb5bb6cbf86f"
         }
-      ]
+      ],
+      "uuid": "04e24879-40db-4146-97b8-c0eb1c5db611"
     },
     {
       "title": "Node.js & npm (JavaScript Runtime)",
       "commands": [
         {
           "command": "brew install node",
-          "description": "Install Node.js (includes npm automatically)"
+          "description": "Install Node.js (includes npm automatically)",
+          "uuid": "abf15053-edd7-451b-915e-fae0a123ce44"
         },
         {
           "command": "node --version",
-          "description": "Check Node.js version"
+          "description": "Check Node.js version",
+          "uuid": "7d187104-1c3e-456c-bee0-e9e8abddc245"
         },
         {
           "command": "npm --version",
-          "description": "Check npm version"
+          "description": "Check npm version",
+          "uuid": "c64f0984-3a3e-4567-a10a-b060736f11df"
         },
         {
           "command": "npm install -g npm@latest",
-          "description": "Update npm to latest version"
+          "description": "Update npm to latest version",
+          "uuid": "e7ae21aa-0837-4555-b640-98b10311d3f4"
         }
-      ]
+      ],
+      "uuid": "968bfb4b-7f6c-4382-b0ea-44c6c86d7e4a"
     },
     {
+      "uuid": "bd3e5ad8-ac51-47bf-9ad0-cdaa0be5c7c9",
       "title": "VS Code (Code Editor)",
       "commands": [
         {
+          "uuid": "c0fb225d-c5b2-4a08-85f5-9a45d09c3173",
           "command": "brew install --cask visual-studio-code",
           "description": "Install VS Code using Homebrew"
         },
         {
+          "uuid": "b9f2740d-f2c9-4cde-a54c-ecffbb5fef82",
           "command": "code --version",
           "description": "Check VS Code version"
         },
         {
+          "uuid": "d057ae18-7f3a-444a-9bd6-8b4a1754308e",
           "command": "code .",
           "description": "Open current directory in VS Code"
         },
         {
+          "uuid": "a6b41a76-b3ef-49a4-9d5d-2494f53f024c",
           "command": "code filename.txt",
           "description": "Open specific file in VS Code"
         },
         {
+          "uuid": "902149a6-dced-4e69-803d-4607888bb43f",
           "command": "⌃ + ` (Control + Backtick)",
           "description": "🖥️ Open integrated terminal in VS Code",
           "copyable": false
         },
         {
+          "uuid": "1a93bb1c-3f91-4033-8c7b-dc4c57f764ab",
           "command": "View → Terminal",
           "description": "📋 Alternative: Use VS Code menu to open terminal",
           "copyable": false
         },
         {
+          "uuid": "3f3a6622-e8ad-4d3d-8d45-76f42d8e499e",
           "command": "⌘ + Shift + P → type 'terminal'",
           "description": "🔍 Command Palette: Search for terminal commands",
           "copyable": false

@@ -1,16 +1,27 @@
 'use client'
 
 import { useState } from 'react'
+import { useHashHighlight } from '../hooks/useHashHighlight'
 
 interface CodeBlockProps {
   code: string
   description?: string
   type?: 'terminal' | 'instruction' | 'code'
   copyable?: boolean
+  commandId?: string // Use the stable ID from JSON
 }
 
-export default function CodeBlock({ code, description, type = 'code', copyable = true }: CodeBlockProps) {
+export default function CodeBlock({ 
+  code, 
+  description, 
+  type = 'code', 
+  copyable = true,
+  commandId
+}: CodeBlockProps) {
   const [copied, setCopied] = useState(false)
+
+  console.log('CodeBlock commandId:', commandId, 'for command:', code.substring(0, 30))
+  const isHighlighted = useHashHighlight(commandId || '')
 
   const copyToClipboard = async () => {
     try {
@@ -46,7 +57,9 @@ export default function CodeBlock({ code, description, type = 'code', copyable =
   }
 
   return (
-    <div className={getCardStyles()}>
+    <div id={commandId || undefined} className={`${getCardStyles()} transition-all duration-700 ${
+      isHighlighted ? 'ring-2 ring-blue-500 bg-gradient-to-r from-blue-50 to-blue-100 scale-[1.02]' : ''
+    }`}>
       <div className="flex items-center justify-between mb-3">
         <div className={`command-code flex-1 mr-3 p-3 rounded border font-mono text-sm ${getCommandStyles()}`}>
           {code}

@@ -9,275 +9,342 @@
       "commands": [
         {
           "command": "rgb(255, 0, 0)",
-          "description": "🔴 Red - Pure red color"
+          "description": "🔴 Red - Pure red color",
+          "uuid": "ac02df9e-81af-4919-8a26-e86543e1b504"
         },
         {
           "command": "rgb(0, 255, 0)",
-          "description": "🟢 Green - Pure green color"
+          "description": "🟢 Green - Pure green color",
+          "uuid": "f3f8d409-cdf8-4923-89ba-c006eb008851"
         },
         {
           "command": "rgb(0, 0, 255)",
-          "description": "🔵 Blue - Pure blue color"
+          "description": "🔵 Blue - Pure blue color",
+          "uuid": "0274e9f2-314e-4a3d-ba80-a78c09daa087"
         },
         {
           "command": "rgb(255, 255, 255)",
-          "description": "⚪ White - All colors at maximum"
+          "description": "⚪ White - All colors at maximum",
+          "uuid": "fb122241-e1d2-4163-9a57-33b718de330f"
         },
         {
           "command": "rgb(0, 0, 0)",
-          "description": "⚫ Black - No color"
+          "description": "⚫ Black - No color",
+          "uuid": "34b0f850-d4a3-4ea9-b29d-260f5e16de82"
         },
         {
           "command": "rgb(128, 128, 128)",
-          "description": "🔘 Gray - 50% gray"
+          "description": "🔘 Gray - 50% gray",
+          "uuid": "f27afa0c-f22d-4163-92af-aa9ed031621c"
         },
         {
           "command": "#FF0000",
-          "description": "🔴 Red in hexadecimal format"
+          "description": "🔴 Red in hexadecimal format",
+          "uuid": "ffb38dcb-c6e3-462e-a6c8-557f8c066555"
         },
         {
           "command": "#00FF00",
-          "description": "🟢 Green in hexadecimal format"
+          "description": "🟢 Green in hexadecimal format",
+          "uuid": "6e4d7547-b89f-4bf4-b611-2cfac5e31c27"
         },
         {
           "command": "#0000FF",
-          "description": "🔵 Blue in hexadecimal format"
+          "description": "🔵 Blue in hexadecimal format",
+          "uuid": "39ffb6ff-add4-4f29-a9e2-bb7eb1f4b116"
         },
         {
           "command": "#FFFFFF",
-          "description": "⚪ White in hexadecimal format"
+          "description": "⚪ White in hexadecimal format",
+          "uuid": "3b966bf0-2e80-4f02-9ed0-c22ec1e5b407"
         },
         {
           "command": "#000000",
-          "description": "⚫ Black in hexadecimal format"
+          "description": "⚫ Black in hexadecimal format",
+          "uuid": "c4faf6ab-80d9-4e7f-a60f-b702bb2500f0"
         },
         {
           "command": "rgba(255, 0, 0, 0.5)",
-          "description": "🔴 Red with 50% transparency (alpha)"
+          "description": "🔴 Red with 50% transparency (alpha)",
+          "uuid": "43fad3f2-468e-4aa5-a05b-85739efdc52b"
         }
-      ]
+      ],
+      "uuid": "f317f5ca-d97f-484a-9b69-9a9764e24afc"
     },
     {
       "title": "Common Color Palettes",
       "commands": [
         {
           "command": "#3B82F6",
-          "description": "🔵 Blue-500 (Tailwind) - Primary blue"
+          "description": "🔵 Blue-500 (Tailwind) - Primary blue",
+          "uuid": "86402933-496d-4f21-92b2-49f6fb1805b4"
         },
         {
           "command": "#EF4444",
-          "description": "🔴 Red-500 (Tailwind) - Error red"
+          "description": "🔴 Red-500 (Tailwind) - Error red",
+          "uuid": "e63a83f5-d8d9-4b9c-b13e-9df278bbfebc"
         },
         {
           "command": "#10B981",
-          "description": "🟢 Green-500 (Tailwind) - Success green"
+          "description": "🟢 Green-500 (Tailwind) - Success green",
+          "uuid": "728f4e3f-d449-4b06-a107-31a1ce0ba796"
         },
         {
           "command": "#F59E0B",
-          "description": "🟡 Yellow-500 (Tailwind) - Warning yellow"
+          "description": "🟡 Yellow-500 (Tailwind) - Warning yellow",
+          "uuid": "f2e375b2-33b6-42e7-929f-9467a64405e7"
         },
         {
           "command": "#8B5CF6",
-          "description": "🟣 Purple-500 (Tailwind) - Accent purple"
+          "description": "🟣 Purple-500 (Tailwind) - Accent purple",
+          "uuid": "c8aed951-6af0-4086-97a1-179f09791823"
         },
         {
           "command": "#6B7280",
-          "description": "🔘 Gray-500 (Tailwind) - Neutral gray"
+          "description": "🔘 Gray-500 (Tailwind) - Neutral gray",
+          "uuid": "daa55cd4-cb95-4ac4-b267-3a83d4612712"
         },
         {
           "command": "#1F2937",
-          "description": "⚫ Gray-800 (Tailwind) - Dark text"
+          "description": "⚫ Gray-800 (Tailwind) - Dark text",
+          "uuid": "430226bb-dc40-4920-b5be-e2b0c58be99f"
         },
         {
           "command": "#F9FAFB",
-          "description": "⚪ Gray-50 (Tailwind) - Light background"
+          "description": "⚪ Gray-50 (Tailwind) - Light background",
+          "uuid": "5a8dcf5b-ebc7-4839-8873-960c5e8405e6"
         }
-      ]
+      ],
+      "uuid": "398d23be-2884-4552-acfc-117eaf3c64d7"
     },
     {
       "title": "REM Sizes & Typography",
       "commands": [
         {
           "command": "1rem",
-          "description": "📏 16px (default) - Base font size"
+          "description": "📏 16px (default) - Base font size",
+          "uuid": "69547732-b49e-406c-b42c-bcba72a9f223"
         },
         {
           "command": "0.75rem",
-          "description": "📏 12px - Small text (xs)"
+          "description": "📏 12px - Small text (xs)",
+          "uuid": "a61ada7a-9c91-4376-954e-6e4adb7a06b3"
         },
         {
           "command": "0.875rem",
-          "description": "📏 14px - Small text (sm)"
+          "description": "📏 14px - Small text (sm)",
+          "uuid": "262f517b-a795-48e9-8edc-a111f3a34637"
         },
         {
           "command": "1.125rem",
-          "description": "📏 18px - Large text (lg)"
+          "description": "📏 18px - Large text (lg)",
+          "uuid": "4ef59eff-8eb8-4dfc-ac90-333cfe40720a"
         },
         {
           "command": "1.25rem",
-          "description": "📏 20px - Extra large text (xl)"
+          "description": "📏 20px - Extra large text (xl)",
+          "uuid": "e2e275de-973a-4643-991e-e68082f6f822"
         },
         {
           "command": "1.5rem",
-          "description": "📏 24px - 2xl heading"
+          "description": "📏 24px - 2xl heading",
+          "uuid": "88175478-f18d-46b4-ba8a-829158ddecb8"
         },
         {
           "command": "1.875rem",
-          "description": "📏 30px - 3xl heading"
+          "description": "📏 30px - 3xl heading",
+          "uuid": "bebeab8a-245c-4da1-b384-0167641f923f"
         },
         {
           "command": "2.25rem",
-          "description": "📏 36px - 4xl heading"
+          "description": "📏 36px - 4xl heading",
+          "uuid": "7e293779-83c0-4473-bc09-466d6793431f"
         },
         {
           "command": "3rem",
-          "description": "📏 48px - 5xl large heading"
+          "description": "📏 48px - 5xl large heading",
+          "uuid": "d881a3a0-a20f-4e48-970d-f9c8d8e9b0d3"
         },
         {
           "command": "4rem",
-          "description": "📏 64px - 6xl extra large heading"
+          "description": "📏 64px - 6xl extra large heading",
+          "uuid": "b12cafb2-8b0e-45a7-a304-f2d0dd64e458"
         }
-      ]
+      ],
+      "uuid": "0738f3ca-8192-41b7-ab8e-65bdbaea128f"
     },
     {
       "title": "Font Families",
       "commands": [
         {
           "command": "font-family: 'Helvetica Neue', Arial, sans-serif;",
-          "description": "🔤 Modern sans-serif stack"
+          "description": "🔤 Modern sans-serif stack",
+          "uuid": "3d72f73a-ad06-45f6-8cff-8a5625ac7714"
         },
         {
           "command": "font-family: 'Times New Roman', Times, serif;",
-          "description": "🔤 Classic serif stack"
+          "description": "🔤 Classic serif stack",
+          "uuid": "0f794cf1-3453-4c8c-aef7-402e49efe2b3"
         },
         {
           "command": "font-family: 'Courier New', Courier, monospace;",
-          "description": "🔤 Monospace for code"
+          "description": "🔤 Monospace for code",
+          "uuid": "37c8e10c-55a4-49f6-a389-8a1c1ca8dd9f"
         },
         {
           "command": "font-family: system-ui, -apple-system, sans-serif;",
-          "description": "🔤 System font stack (native look)"
+          "description": "🔤 System font stack (native look)",
+          "uuid": "29e09bdf-b320-42b5-83ea-5875b5d1b9da"
         },
         {
           "command": "font-family: 'Inter', sans-serif;",
-          "description": "🔤 Inter - Modern web font"
+          "description": "🔤 Inter - Modern web font",
+          "uuid": "09db4eea-c0f0-4f8b-81e4-a4dd2d5c4037"
         },
         {
           "command": "font-family: 'Roboto', sans-serif;",
-          "description": "🔤 Roboto - Google's material design font"
+          "description": "🔤 Roboto - Google's material design font",
+          "uuid": "66d63ff1-ddbe-4a8d-95e8-7267b6d7f779"
         },
         {
           "command": "font-family: 'Poppins', sans-serif;",
-          "description": "🔤 Poppins - Rounded, friendly font"
+          "description": "🔤 Poppins - Rounded, friendly font",
+          "uuid": "24f7573d-bf8b-40c8-8696-00862a19f903"
         },
         {
           "command": "font-family: 'Fira Code', monospace;",
-          "description": "🔤 Fira Code - Code font with ligatures"
+          "description": "🔤 Fira Code - Code font with ligatures",
+          "uuid": "6a63891d-b9b2-4a2e-98ce-154839f8575a"
         }
-      ]
+      ],
+      "uuid": "7d64949e-7572-4499-af57-6687f1fc8af8"
     },
     {
       "title": "Font Weights",
       "commands": [
         {
           "command": "font-weight: 100;",
-          "description": "📝 Thin - Very light text"
+          "description": "📝 Thin - Very light text",
+          "uuid": "8e42e956-7427-4728-abc0-c1f35d59e18d"
         },
         {
           "command": "font-weight: 300;",
-          "description": "📝 Light - Light text"
+          "description": "📝 Light - Light text",
+          "uuid": "96b19af9-712a-4ec4-a4e9-c1a583bba49e"
         },
         {
           "command": "font-weight: 400;",
-          "description": "📝 Normal - Regular text (default)"
+          "description": "📝 Normal - Regular text (default)",
+          "uuid": "33ab072d-e4b9-4ad5-b3c6-9704f0e73fd1"
         },
         {
           "command": "font-weight: 500;",
-          "description": "📝 Medium - Slightly bold"
+          "description": "📝 Medium - Slightly bold",
+          "uuid": "18349bc7-4913-4b9b-8974-6d1226517a53"
         },
         {
           "command": "font-weight: 600;",
-          "description": "📝 Semibold - Semi-bold text"
+          "description": "📝 Semibold - Semi-bold text",
+          "uuid": "eaa04463-0baf-4183-a54e-5f873ccd690c"
         },
         {
           "command": "font-weight: 700;",
-          "description": "📝 Bold - Bold text"
+          "description": "📝 Bold - Bold text",
+          "uuid": "0efeffae-3542-49fb-86b2-849194d53887"
         },
         {
           "command": "font-weight: 800;",
-          "description": "📝 Extrabold - Extra bold text"
+          "description": "📝 Extrabold - Extra bold text",
+          "uuid": "cb87e5d5-e7ef-4650-9d0c-b6342a9567ca"
         },
         {
           "command": "font-weight: 900;",
-          "description": "📝 Black - Heaviest weight"
+          "description": "📝 Black - Heaviest weight",
+          "uuid": "4b77ee67-e46e-4b23-bb42-924e35bd45e9"
         }
-      ]
+      ],
+      "uuid": "894e6ddf-6e66-4845-ac1f-55c89faa7b02"
     },
     {
       "title": "CSS Units Reference",
       "commands": [
         {
           "command": "px",
-          "description": "📐 Pixels - Fixed size, not responsive"
+          "description": "📐 Pixels - Fixed size, not responsive",
+          "uuid": "5ff05eae-c207-46b7-bbd3-34b982aecc35"
         },
         {
           "command": "rem",
-          "description": "📐 Root em - Relative to root font size (16px default)"
+          "description": "📐 Root em - Relative to root font size (16px default)",
+          "uuid": "676a4901-8e48-486e-9667-3732ed6d15ed"
         },
         {
           "command": "em",
-          "description": "📐 Em - Relative to parent font size"
+          "description": "📐 Em - Relative to parent font size",
+          "uuid": "e3d41d10-aee8-4273-a484-e2dc17aa0b66"
         },
         {
           "command": "%",
-          "description": "📐 Percentage - Relative to parent element"
+          "description": "📐 Percentage - Relative to parent element",
+          "uuid": "eece2239-07e4-4f4a-968d-3dc85cbd019d"
         },
         {
           "command": "vw",
-          "description": "📐 Viewport width - 1vw = 1% of viewport width"
+          "description": "📐 Viewport width - 1vw = 1% of viewport width",
+          "uuid": "eb39135a-004e-4be7-b20d-875eeda7c3bd"
         },
         {
           "command": "vh",
-          "description": "📐 Viewport height - 1vh = 1% of viewport height"
+          "description": "📐 Viewport height - 1vh = 1% of viewport height",
+          "uuid": "50d4692d-d7d4-4670-8d1e-def2579518f3"
         },
         {
           "command": "vmin",
-          "description": "📐 Viewport minimum - Smaller of vw or vh"
+          "description": "📐 Viewport minimum - Smaller of vw or vh",
+          "uuid": "2f9ddc57-2b6d-4d96-b915-26a717b90b12"
         },
         {
           "command": "vmax",
-          "description": "📐 Viewport maximum - Larger of vw or vh"
+          "description": "📐 Viewport maximum - Larger of vw or vh",
+          "uuid": "5ce997c6-b755-415b-9a54-fec73b9b2de6"
         }
-      ]
+      ],
+      "uuid": "57287f94-863a-4f1d-84b6-b20000634ede"
     },
     {
       "title": "Useful Design Tools",
       "commands": [
         {
           "command": "https://coolors.co/",
-          "description": "🎨 Coolors - Color palette generator"
+          "description": "🎨 Coolors - Color palette generator",
+          "uuid": "bce134c9-1ed4-44ad-aef9-ff273668699a"
         },
         {
           "command": "https://fonts.google.com/",
-          "description": "🔤 Google Fonts - Free web fonts"
+          "description": "🔤 Google Fonts - Free web fonts",
+          "uuid": "61ceb4a3-ac42-4177-a363-6eb7d9fdb004"
         },
         {
           "command": "https://www.figma.com/",
-          "description": "🎯 Figma - Design and prototyping tool"
+          "description": "🎯 Figma - Design and prototyping tool",
+          "uuid": "9be2ec2d-4220-4ab7-8a6e-44ba685a0c15"
         },
         {
           "command": "https://tailwindcss.com/docs/customizing-colors",
-          "description": "🎨 Tailwind Colors - Complete color reference"
+          "description": "🎨 Tailwind Colors - Complete color reference",
+          "uuid": "6618d9d9-a7be-46f5-af1b-2dedb936fc52"
         },
         {
           "command": "https://contrast-ratio.com/",
-          "description": "♿ Contrast Checker - Accessibility testing"
+          "description": "♿ Contrast Checker - Accessibility testing",
+          "uuid": "7e09bddf-bf3e-45cc-ae03-8f4fef607a42"
         },
         {
           "command": "https://www.canva.com/colors/color-wheel/",
-          "description": "🌈 Color Wheel - Color theory tool"
+          "description": "🌈 Color Wheel - Color theory tool",
+          "uuid": "4fc6e546-53c7-41a8-a2cd-4e193605d95e"
         }
-      ]
+      ],
+      "uuid": "456f560b-e76b-445a-8ddc-2b8a5fb53bfe"
     }
   ]
 }

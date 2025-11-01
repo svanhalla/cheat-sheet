@@ -5,31 +5,38 @@
   "icon": "🔍",
   "categories": [
     {
+      "uuid": "cb9e0660-b231-4448-b1ec-2f6fad2fa09a",
       "title": "Meta Tags",
       "commands": [
         {
+          "uuid": "b49f5917-7c18-4848-aa77-08fbafe53e83",
           "command": "<title>Page Title (50-60 characters)</title>",
           "description": "Page title - most important SEO element"
         },
         {
+          "uuid": "b1d7f795-2936-4c3b-96e7-b1e4e9fdd4b2",
           "command": "<meta name=\"description\" content=\"Page description 150-160 chars\">",
           "description": "Meta description - appears in search results"
         },
         {
+          "uuid": "ee5a25d4-6a49-4234-93be-c517e1006520",
           "command": "<meta name=\"keywords\" content=\"keyword1, keyword2, keyword3\">",
           "description": "Keywords (less important now, but still used)"
         },
         {
+          "uuid": "34ffdaf4-acdb-490d-bd85-ccd28ca90fc5",
           "command": "<meta name=\"robots\" content=\"index, follow\">",
           "description": "Tell search engines to index and follow links"
         },
         {
+          "uuid": "be9d1628-d902-4130-9a33-314b3c67e741",
           "command": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
           "description": "Mobile-friendly viewport (required for mobile SEO)"
         },
         {
           "command": "<link rel=\"canonical\" href=\"https://example.com/page\">",
-          "description": "Canonical URL to prevent duplicate content issues"
+          "description": "Canonical URL to prevent duplicate content issues",
+          "uuid": "72d19614-dc22-42c8-9f7e-34b68a1ac84f"
         }
       ]
     },
@@ -38,112 +45,139 @@
       "commands": [
         {
           "command": "<meta property=\"og:title\" content=\"Page Title\">",
-          "description": "Title when shared on social media"
+          "description": "Title when shared on social media",
+          "uuid": "96db1105-a5b3-4feb-8272-f12c3e47aece"
         },
         {
           "command": "<meta property=\"og:description\" content=\"Page description\">",
-          "description": "Description when shared on social media"
+          "description": "Description when shared on social media",
+          "uuid": "cd2563b7-da29-4c35-a5ba-efa22f3c7950"
         },
         {
           "command": "<meta property=\"og:image\" content=\"https://example.com/image.jpg\">",
-          "description": "Image when shared (1200x630px recommended)"
+          "description": "Image when shared (1200x630px recommended)",
+          "uuid": "4cbc8c5d-4831-476b-95a8-07c04cd13c3c"
         },
         {
           "command": "<meta property=\"og:url\" content=\"https://example.com/page\">",
-          "description": "Canonical URL for social sharing"
+          "description": "Canonical URL for social sharing",
+          "uuid": "4e459570-801a-4905-9d1d-71e4a3ed0e43"
         },
         {
           "command": "<meta property=\"og:type\" content=\"website\">",
-          "description": "Type of content (website, article, etc.)"
+          "description": "Type of content (website, article, etc.)",
+          "uuid": "104e2be9-128a-4691-bb72-a0e5ab068a13"
         },
         {
           "command": "<meta name=\"twitter:card\" content=\"summary_large_image\">",
-          "description": "Twitter card type for better Twitter sharing"
+          "description": "Twitter card type for better Twitter sharing",
+          "uuid": "87660979-29aa-4e80-ba9f-5a8f06b4f5d7"
         }
-      ]
+      ],
+      "uuid": "b74c7412-170c-441e-8e75-6cebc7f35681"
     },
     {
       "title": "Google Indexing Process",
       "commands": [
         {
           "command": "Submit sitemap to Google Search Console",
-          "description": "📋 Step 1: Add your sitemap.xml to help Google find all pages"
+          "description": "📋 Step 1: Add your sitemap.xml to help Google find all pages",
+          "uuid": "1a70b15e-5653-4154-b0b5-2522f35ac0b6"
         },
         {
           "command": "Request indexing for new pages",
-          "description": "📋 Step 2: Use 'Request Indexing' in Search Console for new content"
+          "description": "📋 Step 2: Use 'Request Indexing' in Search Console for new content",
+          "uuid": "c5029253-4451-4dd9-9d2d-d752fa028c0c"
         },
         {
           "command": "Check robots.txt file",
-          "description": "📋 Step 3: Ensure robots.txt allows Google to crawl your site"
+          "description": "📋 Step 3: Ensure robots.txt allows Google to crawl your site",
+          "uuid": "0fbc6692-dcaf-47c4-bb27-b8780ae3c304"
         },
         {
           "command": "Monitor Core Web Vitals",
-          "description": "📋 Step 4: Check page speed and user experience metrics"
+          "description": "📋 Step 4: Check page speed and user experience metrics",
+          "uuid": "ff5102f6-2733-450d-849a-53c74575a161"
         },
         {
           "command": "Build quality backlinks",
-          "description": "📋 Step 5: Get other reputable sites to link to your content"
+          "description": "📋 Step 5: Get other reputable sites to link to your content",
+          "uuid": "9df9db43-2194-4c4f-9d15-1cb70450b7cf"
         },
         {
           "command": "Create quality content regularly",
-          "description": "📋 Step 6: Publish fresh, valuable content consistently"
+          "description": "📋 Step 6: Publish fresh, valuable content consistently",
+          "uuid": "1f613237-f4b7-4398-9e3d-4de31e654567"
         }
-      ]
+      ],
+      "uuid": "9bf2ba7f-3c3c-4c9a-b228-93cc8340b987"
     },
     {
       "title": "Structured Data (Schema)",
       "commands": [
         {
           "command": "<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Organization\",\n  \"name\": \"Your Company\",\n  \"url\": \"https://example.com\"\n}\n</script>",
-          "description": "Organization schema for business information"
+          "description": "Organization schema for business information",
+          "uuid": "17ce02aa-298a-4962-97fc-ba96c1e4955f"
         },
         {
           "command": "<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"Article Title\",\n  \"author\": \"Author Name\",\n  \"datePublished\": \"2025-01-01\"\n}\n</script>",
-          "description": "Article schema for blog posts and articles"
+          "description": "Article schema for blog posts and articles",
+          "uuid": "29ce40a7-1b86-482b-8dc1-6679eabffb43"
         },
         {
           "command": "<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebSite\",\n  \"name\": \"Site Name\",\n  \"url\": \"https://example.com\",\n  \"potentialAction\": {\n    \"@type\": \"SearchAction\",\n    \"target\": \"https://example.com/search?q={search_term_string}\",\n    \"query-input\": \"required name=search_term_string\"\n  }\n}\n</script>",
-          "description": "Website schema with search functionality"
+          "description": "Website schema with search functionality",
+          "uuid": "66f2eb17-64d5-4a6d-b415-6e9d76528898"
         }
-      ]
+      ],
+      "uuid": "dcef44eb-8512-4079-9f5a-b8c5cc664904"
     },
     {
       "title": "Essential SEO Tools & Links",
       "commands": [
         {
           "command": "https://search.google.com/search-console",
-          "description": "🔧 Google Search Console - Monitor your site's search performance"
+          "description": "🔧 Google Search Console - Monitor your site's search performance",
+          "uuid": "35612e8d-dc27-41a3-ac16-b11102e83650"
         },
         {
           "command": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap",
-          "description": "📖 Google Sitemap Guide - How to create and submit sitemaps"
+          "description": "📖 Google Sitemap Guide - How to create and submit sitemaps",
+          "uuid": "03dcb3b9-1b6e-4271-8956-9790b286339e"
         },
         {
           "command": "https://pagespeed.web.dev/",
-          "description": "⚡ PageSpeed Insights - Test your site's loading speed"
+          "description": "⚡ PageSpeed Insights - Test your site's loading speed",
+          "uuid": "fa64eb0a-064a-416a-a059-6753858438eb"
         },
         {
           "command": "https://search.google.com/test/mobile-friendly",
-          "description": "📱 Mobile-Friendly Test - Check if your site works on mobile"
+          "description": "📱 Mobile-Friendly Test - Check if your site works on mobile",
+          "uuid": "6ff05eb7-8db6-41bc-9755-0d8d6c1aa7a4"
         },
         {
           "command": "https://validator.schema.org/",
-          "description": "✅ Schema Validator - Test your structured data markup"
+          "description": "✅ Schema Validator - Test your structured data markup",
+          "uuid": "8ef5beb3-7d9d-4f46-bf8d-9edf4bb459c8"
         },
         {
           "command": "https://developers.google.com/search/docs/appearance/structured-data",
-          "description": "📚 Google Structured Data Guide - Complete reference"
+          "description": "📚 Google Structured Data Guide - Complete reference",
+          "uuid": "73597e9a-3725-4393-b30e-a193647bf1eb"
         },
         {
           "command": "https://ahrefs.com/backlink-checker",
-          "description": "🔗 Backlink Checker - See who links to your site (free tool)"
+          "description": "🔗 Backlink Checker - See who links to your site (free tool)",
+          "uuid": "bd75d343-7438-451f-9539-e0b3e675d1dd"
         },
         {
           "command": "https://www.google.com/webmasters/tools/submit-url",
-          "description": "🚀 Submit URL to Google - Request indexing of single pages"
+          "description": "🚀 Submit URL to Google - Request indexing of single pages",
+          "uuid": "e65ae00e-fc81-44a1-a54d-da6ddd978285"
         }
-      ]
+      ],
+      "uuid": "96f47eb5-d1ef-4fdd-a5e7-d6fc39eb1458"
     }
   ]
 }
